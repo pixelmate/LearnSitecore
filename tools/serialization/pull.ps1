@@ -1,5 +1,5 @@
 Push-Location ../../
 
-sitecore ser pull
+dotnet sitecore ser pull
 
 Push-Location .\tools\serialization\
