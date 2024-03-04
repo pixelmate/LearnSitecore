@@ -1,0 +1,54 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+//@import "base/fontawesome/font-awesome-mix-var";
+
+.component {
+  &.with-image-left {
+    .slide {
+      background-color: $bg-gray !important;
+    }
+    .body-copy {
+      background-color: transparent !important;
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 900;
+        margin-top: 3.3rem;
+        margin-bottom: 2.2rem;
+      }
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+    @include respond-to(desktop) {
+      .image-hoder {
+        padding: 3rem 0;
+        max-width: 70%;
+        margin: auto;
+      }
+      .body-copy {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@include respond-to(below-tab) {
+  .component {
+    &.with-image-left {
+      display: none;
+      .slick-dots {
+        top: 0;
+        bottom: auto;
+        position: static;
+        z-index: 15;
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

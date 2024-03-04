@@ -1,0 +1,73 @@
+{
+  "namespace": "Foundation.LearnSitecore",
+  "items": {
+    "includes": [
+      {
+        "name": "Templates-Project",
+        "path": "/sitecore/templates/Project/Loreal/Brand Sites/Cerave",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Templates-Feature",
+        "path": "/sitecore/templates/Feature/LearnSitecore",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Templates-Foundation",
+        "path": "/sitecore/templates/Foundation/LearnSitecore",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Branch-Project",
+        "path": "/sitecore/templates/Branches/Project/LearnSitecore",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Branch-Feature",
+        "path": "/sitecore/templates/Branches/Feature/LearnSitecore",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Branch-Foundation",
+        "path": "/sitecore/templates/Branches/Foundation/LearnSitecore",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Rendering-Feature",
+        "path": "/sitecore/layout/Renderings/Feature/LearnSitecore",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "System-Settings-Feature",
+        "path": "/sitecore/system/Settings/Feature/LearnSitecore",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Media-library-Project",
+        "path": "/sitecore/media library/Project/Loreal",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "CeraveIndia Content",
+        "path": "/sitecore/content/Loreal/Brand Sites/Cerave",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "CeraveIndia Themes",
+        "path": "/sitecore/media library/Themes/Loreal/Brand Sites/Cerave/IN/IN",
+        "scope": "SingleItem",
+        "allowedPushOperations": "createUpdateAndDelete"
+      }
+    ]
+  }
+}

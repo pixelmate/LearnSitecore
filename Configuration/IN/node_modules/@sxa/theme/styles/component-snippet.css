@@ -1,0 +1,28 @@
+.snippet {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.snippet .is-empty-hint {
+  min-height: 50px;
+  background: linear-gradient(0.9turn, #e3e3e3, #ccc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 10px;
+  position: relative;
+}
+
+.snippet .is-empty-hint::before {
+  content: attr(data-text);
+  height: 35px;
+  position: absolute;
+  background: white;
+  z-index: 1;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+}

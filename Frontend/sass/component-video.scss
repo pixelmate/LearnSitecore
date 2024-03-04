@@ -1,0 +1,96 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+
+.component{
+    &.video {
+        .mejs-container {
+            overflow: hidden;
+        }
+        .mejs-controls {
+            .mejs-button {
+                button {
+                    box-shadow: none;
+                   
+                }
+            }
+        }
+        .sxa-video-wrapper {
+            position: relative
+        }
+        .video-init {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            background: url("/-/media/Base-Themes/Core-Libraries/styles/mejs-controls.svg") no-repeat;
+            background-position: 0 -39px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .mejs-iframe-overlay{
+            display: none;
+        }    
+    }
+    .video-gallery{
+       &.container{
+        padding-left: 0;
+        padding-right: 0;
+       }
+        .gallery-item-wrapper{
+            .row{
+                display: flex !important;
+                width: auto !important;
+            }
+            .internal-video,
+            .youtube-video {
+                padding-top: 56.25%;
+                margin-bottom: 40px;
+                position: relative;
+                video,
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            
+            
+        }
+        .video-gallery-wapper{
+            .gallery-item{
+                padding: 0 25px;
+            }
+        }
+        .gallery-item-info{
+            margin-bottom: 30px;
+        }
+        .slick-next, 
+        .slick-prev{
+            background-position: center center;            
+        }
+        .slick-next{
+            right: 10px;
+        }
+        .slick-prev{
+         left: 10px;
+        }
+    }
+}
+.bg-color-black{
+    .video-gallery{
+        .item-header{
+            color: #ff4222;
+        }
+        .caption{
+            color: #fff;
+            h2{
+                color: #fff;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "in",
+  "version": "1.0.0",
+  "description": "Boilerplate for creating a new theme for your Sitecore site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "@sxa/cli": "^10.3.0",
+    "gulp-debug": "^5.0.1",
+    "gulp-msbuild": "^0.10.0",
+    "gulp-tap": "^2.0.0"
+  }
+}

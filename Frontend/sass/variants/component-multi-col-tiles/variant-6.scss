@@ -1,0 +1,64 @@
+//variant-6 multi-col-tiles
+.inner-wrap {
+    .copy-wrap {
+        background-color: $offwhite;
+        margin: 2.5rem 0;
+        padding: 0;
+        img {
+            width: 100%;
+        }
+        .col-left {
+            padding-top: 1.5rem;
+        }
+        .col-right {
+            position: relative;
+            .body-copy {
+                padding-top: 1.8rem;
+                h2 {
+                    color: $dark-green;
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    color: $light-gray-paragraph;
+                    line-height: 1.6;
+                    padding-bottom: 1.5rem;
+                }
+            }
+        }
+        @include respond-to(tab) {
+            margin-top: 6rem;
+            margin-left: 3rem;
+            .body-copy {
+                padding: 2rem 1.5rem;
+            }
+            .col-left {
+                position: relative;
+                .field-image {
+                    position: relative;
+                    bottom: 4rem;
+                    right: 4rem;
+                }
+            }
+        }
+        @include respond-to(desktop) {
+            .col-right {
+                .body-copy {
+                    width: calc(100% - 8rem);
+                    padding: 5rem 0 0 0;
+                }
+            }
+            .col-left {
+                .field-image {
+                    position: relative;
+                    bottom: 4rem;
+                    right: 5rem;
+                }
+            }
+        }
+    }
+    .col,
+    .content-left {
+        padding: 0;
+    }
+}

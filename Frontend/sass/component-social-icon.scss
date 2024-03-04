@@ -1,0 +1,21 @@
+@import "abstracts/functions";
+
+
+.utility-navigation {
+  &.social-links {
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      flex-wrap: wrap;
+      
+    }
+    h3,.fa {
+      display: block;
+      padding: 1.5rem 1rem;
+      font-weight:300;
+    }
+  }
+}

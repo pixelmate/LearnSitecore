@@ -1,0 +1,34 @@
+
+@import "abstracts/vars";
+    
+    &.image-brand-listing {
+        .listing-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }        
+        .brand-img-holder {
+            max-width: 130px;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            @media (min-width: 400px) {
+                max-width: 175px;
+            }
+            @include respond-to(mob-horizontal) {
+                max-width: 200px;
+            }            
+            @include respond-to(tab) {
+                max-width: 240px;
+            }
+            @include respond-to(desktop) {
+                max-width: 250px;
+            }
+        }
+       
+    }
+    
+
+

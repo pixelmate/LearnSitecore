@@ -1,0 +1,316 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+.tabs {
+    overflow: hidden;
+    background: none;
+    border: none;
+    position: relative;
+   
+
+    .tab {
+        display: block;
+        padding: 1.5rem 3rem;
+
+        .tab-heading-mob {
+            background-color: $page-tab;
+            color: $text-white;
+            padding: 2.0rem 2.0rem;
+
+            .field-heading {
+                color: $text-white;
+                font-weight: bold;
+            }
+        }
+        .row:nth-child(2){
+            display: none;
+        }
+        &.active{
+            .row:nth-child(2){
+                display: flex;
+            }
+        }
+    }
+}
+
+.tab-slider {
+    position: absolute;
+    background: $tab-heading-bg;
+    cursor: pointer;
+    border: 2px solid $border-basic-color;
+    vertical-align: center;
+    width: 15px;
+    text-indent: -9999px;
+    z-index: 10;
+}
+
+.tabs-heading {
+    overflow: hidden;
+    display: none;
+
+    li {
+        @include border-basic(top, $tab-heading-bg, 2px);
+        @include border-basic(left, $tab-heading-bg);
+        @include border-basic(right, $tab-heading-bg);
+        @include border-basic(bottom, $tab-container-border);
+        float: left;
+        display: block;
+        margin-left: 1px;
+        background: $tab-heading-bg;
+        width: auto;
+        cursor: pointer;
+
+        >div {
+            @include clearfix();
+            padding: 3px 10px;
+            display: block;
+            text-decoration: none;
+            color: $tab-heading-color;
+
+            .field-heading {
+                font-size: $tab-font-header;
+            }
+
+            >.row {
+                display: block;
+            }
+        }
+
+        .component.content {
+            margin: 5px 0;
+        }
+
+        &.active {
+            background: $tab-heading-active-bg;
+            @include border-basic(top, $tab-container-border, 2px);
+            @include border-basic(bottom, $tab-container-border);
+            @include border-basic(left);
+            @include border-basic(right);
+
+            a {
+                color: $tab-heading-active-color;
+            }
+        }
+
+        &:hover {
+            @include border-basic(top, $tab-container-border, 2px);
+            background: $tab-heading-active-bg;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.tabs-container {
+    @include border-basic(top, $tab-container-border);
+    background: $tab-container-bg;
+    margin-top: -1px;
+}
+
+.tab {
+    @include clearfix();
+    display: none;
+    padding: 3.0rem;
+
+    &.active {
+        display: block;
+    }
+
+    .score-content-spot {
+        p {
+            margin: 0 0 1.0rem;
+
+            a {
+                color: $anchor;
+                text-decoration: none;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .attachment-list {
+        h3 {
+            display: none;
+        }
+
+        margin-top:2.5rem;
+
+        .link-icon {
+            padding: 0px;
+            margin: 2.5rem 2.5rem 2.5rem 0;
+            padding-left: 6.0rem;
+            background: none !important;
+            color: rgba(88, 89, 91, 0.4);
+            position: relative;
+            text-align: left;
+            width: auto;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            display: inline-block;
+            box-sizing: border-box;
+            text-decoration: none;
+            vertical-align: top;
+
+            &:before {
+                content: '';
+                width: 40px;
+                height: 40px;
+                background: transparent url(../images/bg_link_pdf.png) no-repeat center top;
+                background-size: contain;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10rem;
+                position: absolute;
+                top: calc(50% - 20px);
+                left: 0;
+            }
+        }
+    }
+
+    ul {
+
+        margin: 0 0 1.0rem;
+        list-style-type: disc;
+        margin-block-start: 1em;
+
+        li {
+            color: $page-tab-list;
+            font-size: 1.8rem;
+            margin: 0;
+            list-style-type: none;
+            padding-inline-start: 4.0rem;
+            position: relative;
+
+            &::before {
+                content: "\25CF";
+                padding-right: 0.4rem;
+                font-size: 1.8rem;
+                left: 1rem;
+                top: 0rem;
+                position: absolute;
+            }
+
+            a {
+                color: $anchor;
+                text-decoration: none;
+                ;
+            }
+        }
+    }
+}
+
+@include respond-to(desktop) {
+    ul {
+        &.tabs-heading {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin-left: .2rem;
+                width: calc(25% - .15rem);
+                padding: 0;
+                border: 0;
+                background-color: $page-tab-bg;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                >div {
+                    padding: 2rem;
+                    height: 10.0rem;
+
+                    .field-heading {
+                        color: $white;
+                        font-weight: bold;
+                    }
+                }
+
+                &.active,
+                &:hover {
+                    background-color: $page-tab;
+                    border: 0;
+
+                    >div {
+                        .field-heading {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs {
+        .tabs-container {
+            border: 1px solid rgba(88, 89, 91, 0.4);
+            margin-bottom: 2rem;
+
+            .tab {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                ul {
+                    li {
+                        font-size: 1.8rem;
+                        line-height: 2.5rem;
+
+                        box-sizing: border-box;
+
+                        &::before {
+                            font-size: 1.4rem;
+                            left: 1.5rem;
+                            top: 0rem;
+                        }
+
+                    }
+                }
+
+                .tab-heading-mob {
+                    display: none;
+                }
+            }
+        }
+
+        .score-column3 {
+            &.equal {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        .attachment-list {
+            .link-icon {
+                width: calc(50% - 6rem);
+                box-sizing: border-box;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .score-content-spot {
+        p {
+            a {
+                font-weight: normal;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #23527c;
+                }
+            }
+        }
+    }
+}
+
+@import "styles/tabs/*";
+@import "styles/tabs-overflow/*";

@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{4EED8550-0333-4A21-8F52-694EEC272196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{57BEECEA-CD96-46A0-9096-1C9A3687B322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{7B10C581-B14F-4388-B6D4-3919E45EAF4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{FFA8442B-785D-4284-ACC0-E7928C31A03F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnSXA.Project.Website", "src\Project\LearnSXA.Project.Website\LearnSXA.Project.Website.csproj", "{E58FAF03-5D80-43F1-8A47-4D087092CFF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScribanExtensions", "ScribanExtensions", "{A1514214-97AF-4178-A5B4-025548D77350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.LearnSitecore.ScribanExtensions", "src\Foundation\ScribanExtensions\code\Foundation.LearnSitecore.ScribanExtensions.csproj", "{C6A1C8D5-6F30-4278-B626-94D51C876388}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{FAB31122-BC87-474E-9E7C-ADC43FDC19CB}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\LearnSXA\Foundation.LearnSitecore.module.json = src\Project\LearnSXA\Foundation.LearnSitecore.module.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CeraveIndia", "CeraveIndia", "{933E7760-CA49-4B52-B70F-9DA5A2E09C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC.Project.CeraveIndia", "src\Project\LearnSXA\SC.Project.CeraveIndia\SC.Project.CeraveIndia.csproj", "{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{74ABD315-7817-4422-BD1B-595FBA7F97D1}"
+	ProjectSection(SolutionItems) = preProject
+		sitecore.json = sitecore.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E58FAF03-5D80-43F1-8A47-4D087092CFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58FAF03-5D80-43F1-8A47-4D087092CFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58FAF03-5D80-43F1-8A47-4D087092CFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58FAF03-5D80-43F1-8A47-4D087092CFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A1C8D5-6F30-4278-B626-94D51C876388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A1C8D5-6F30-4278-B626-94D51C876388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A1C8D5-6F30-4278-B626-94D51C876388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A1C8D5-6F30-4278-B626-94D51C876388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFA8442B-785D-4284-ACC0-E7928C31A03F} = {7B10C581-B14F-4388-B6D4-3919E45EAF4C}
+		{E58FAF03-5D80-43F1-8A47-4D087092CFF5} = {FFA8442B-785D-4284-ACC0-E7928C31A03F}
+		{A1514214-97AF-4178-A5B4-025548D77350} = {57BEECEA-CD96-46A0-9096-1C9A3687B322}
+		{C6A1C8D5-6F30-4278-B626-94D51C876388} = {A1514214-97AF-4178-A5B4-025548D77350}
+		{FAB31122-BC87-474E-9E7C-ADC43FDC19CB} = {57BEECEA-CD96-46A0-9096-1C9A3687B322}
+		{933E7760-CA49-4B52-B70F-9DA5A2E09C7A} = {7B10C581-B14F-4388-B6D4-3919E45EAF4C}
+		{E004D0D2-EA0F-47CB-8A1B-86EC1EFA3B46} = {933E7760-CA49-4B52-B70F-9DA5A2E09C7A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA90A184-74C6-4632-A139-7531F54B8E2D}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,151 @@
+@import "styles/container/*";
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+.container {
+    // padding: 0;
+    .component-content {
+        @include clearfix();
+        >.row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    &:not(.col-12) {
+        max-width: 127rem;
+    }
+
+}
+
+.inner-container {
+    margin: 0 auto;
+    position: relative;
+
+    @include respond-to(extra-largedesktop) {
+        &:not(.col-12) {
+            max-width: 127rem;
+        }
+    }
+}
+
+.full-with-bg-container {
+    >.component-content {
+        >.row {
+            margin: 0 auto;
+
+            @include respond-to(extra-largedesktop) {
+                &:not(.col-12) {
+                    max-width: 127rem;
+                }
+            }
+        }
+    }
+
+    &.bg-cover,
+    &.cover-background {
+        .component-content {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    &.bg-bottom-align {
+        .component-content {
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center bottom;
+        }
+
+    }
+
+    &.bg-top-align {
+        .component-content {
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center top;
+        }
+
+    }
+
+    &.bg-center-align {
+        .component-content {
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+        }
+
+    }
+
+    &.indent-top {
+        >.component-content {
+            padding-top: 3rem;
+        }
+
+    }
+
+    &.indent-bottom {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &.indent-top-sm {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-top: 2rem;
+        }
+    }
+
+    &.indent-bottom-sm {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &.indent-bottom-large {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-bottom: 10rem;
+        }
+    }
+
+    &.indent-bottom-xl {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-bottom: 20rem;
+        }
+    }
+
+    &.indent-top-large {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-top: 10rem;
+        }
+    }
+
+    &.indent-top-xl {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        >.component-content {
+            padding-top: 20rem;
+        }
+    }
+
+}

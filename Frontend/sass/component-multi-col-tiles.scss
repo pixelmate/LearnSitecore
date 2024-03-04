@@ -1,0 +1,118 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+
+.component {
+    &.multi-column-content-tiles {
+
+        /* TwoColBanner */
+        &.variant-1 {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            @import "variants/component-multi-col-tiles/variant-1.scss";
+        }
+
+        /* Full width rich text banner with a 2 column layout CTA buttons */
+        &.variant-2 {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            background-image: url("../images/CanvasTexture.png");
+            background-repeat: repeat;
+            @import "variants/component-multi-col-tiles/variant-2.scss";
+        }
+
+        /* Full width rich text banner with a 2 column layout CTA buttons */
+        &.variant-3 {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            @import "variants/component-multi-col-tiles/variant-3.scss";
+        }
+
+        // Full width rich text banner with a 2 column layout CTA buttons 
+        &.variant-4 {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            background-color: $dark-green;
+            @import "variants/component-multi-col-tiles/variant-4.scss";
+        }
+
+        // Full width banner with general info 
+        &.variant-5 {
+            background-color: $dark-green;
+            padding: 4rem 2rem;
+            @import "variants/component-multi-col-tiles/variant-5.scss";
+        }
+
+        &.variant-6 {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            @import "variants/component-multi-col-tiles/variant-6.scss";
+        }
+
+        &.flip-over-tiles {
+
+            @import "variants/component-multi-col-tiles/flip-over-tiles.scss";
+        }
+    }
+}
+
+.on-page-editor {
+    .component {
+        &.teaser-promo {
+            .field-teaserimage {
+                display: block;
+            }
+        }
+        &.multi-column-content-tiles{
+            &.flip-over-tiles {
+                .flip-over-card {
+                    .flip-rollover {
+                        transform: none;
+                        position: static;
+                    }
+                    .image-wrapper {
+                        transform: none ;
+                    }
+                    .flip-over-content {
+                        position: static;
+                        transform: none;
+                        min-height: 180px;
+                    }
+
+                }
+            }
+            .section-container {
+                justify-content: center;
+        
+                >div {
+                    max-width: 50%;
+        
+                    @include respond-to(tab) {
+                        max-width: 33%;
+                    }
+        
+                    @include respond-to(small-device) {
+                        max-width: 100%;
+                    }
+        
+        
+                }
+        
+                .flip-over-card {
+                    max-width: 100%;
+                }
+        
+            }
+           
+        } 
+    }
+
+   
+}
+
+
+
+
+
+

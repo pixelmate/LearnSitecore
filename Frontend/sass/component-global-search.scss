@@ -1,0 +1,89 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "variants/component-global-search/component-search-result.scss";
+
+.global-search-sugest {
+    .ui-helper-zfix {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+    }
+
+    &.ui-front {
+        z-index: 100;
+    }
+
+    &.ui-state-disabled {
+        cursor: default !important;
+        pointer-events: none;
+    }
+
+    &.ui-autocomplete {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: default;
+    }
+
+    &.ui-menu {
+        list-style: none;
+        margin: 0;
+        display: block;
+        border: none !important;
+        outline: 0;
+        padding: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        background: #fff;
+
+        .ui-menu {
+            position: absolute;
+        }
+
+        .ui-menu-item {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .ui-menu-item-wrapper {
+            position: relative;
+            padding: 5px 0.4em 5px 0.4em;
+            border: none !important;
+            line-height: 1;
+        }
+
+        .ui-menu-divider {
+            color: #000;
+
+            &:hover,
+            &:focus {
+                color: #000;
+                background-color: #cdcfd0;
+            }
+        }
+    }
+}
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.product-wrap {
+    .result-count {
+        padding: 15px 0 .5rem 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.0rem;
+    }
+}
+
+.load-more {
+    margin: 0 auto;
+}

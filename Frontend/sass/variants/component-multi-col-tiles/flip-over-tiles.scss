@@ -1,0 +1,535 @@
+.flip-over-card {
+  &.flip-bg-red {
+    .flip-boxes {
+      border-bottom: 2px solid $bg-red;
+    }
+    .flip-back {
+      background-color: $bg-red;
+    }
+    .image-wrapper {
+      &:after {
+        border: 15px solid $bg-red;
+        border-bottom-color: $white;
+        border-right-color: $white;
+      }
+    }
+    .flip-over-content {
+      background: $bg-red;
+    }
+    .flip-rollover {
+      &:after {
+        border: 15px solid $bg-red;
+        border-bottom-color: $white;
+        border-left-color: $white;
+      }
+    }
+    .flip-card-btn a {
+      background: $bg-red;
+    }
+  }
+
+  &.flip-bg-darkblue {
+    .flip-boxes {
+      border-bottom: 2px solid $bg-darkblue;
+    }
+    .flip-back {
+      background-color: $bg-darkblue;
+    }
+    .image-wrapper {
+      &:after {
+        border: 15px solid $bg-darkblue;
+        border-bottom-color: $white;
+        border-right-color: $white;
+      }
+    }
+    .flip-over-content {
+      background: $bg-darkblue;
+    }
+    .flip-rollover {
+      &:after {
+        border: 15px solid $bg-darkblue;
+        border-bottom-color: $white;
+        border-left-color: $white;
+      }
+    }
+    .flip-card-btn a {
+      background: $bg-darkblue;
+    }
+  }
+
+  &.flip-bg-green {
+    .flip-boxes {
+      border-bottom: 2px solid $bg-green;
+    }
+    .flip-back {
+      background-color: $bg-green;
+    }
+    .image-wrapper {
+      &:after {
+        border: 15px solid $bg-green;
+        border-bottom-color: $white;
+        border-right-color: $white;
+      }
+    }
+    .flip-over-content {
+      background: $bg-green;
+    }
+    .flip-rollover {
+      &:after {
+        border: 15px solid $bg-green;
+        border-bottom-color: $white;
+        border-left-color: $white;
+      }
+    }
+    .flip-card-btn a {
+      border: 1px solid $card-btn-color;
+      background: $bg-green;
+    }
+  }
+
+  &.flip-bg-brightblue {
+    .flip-boxes {
+      border-bottom: 2px solid $bg-brightblue;
+    }
+    .flip-back {
+      background-color: $bg-brightblue;
+    }
+    .image-wrapper {
+      &:after {
+        border: 15px solid $bg-brightblue;
+        border-bottom-color: $white;
+        border-right-color: $white;
+      }
+    }
+    .flip-over-content {
+      background: $bg-brightblue;
+    }
+    .flip-rollover {
+      &:after {
+        border: 15px solid $bg-brightblue;
+        border-bottom-color: $white;
+        border-left-color: $white;
+      }
+    }
+    .flip-card-btn a {
+      background: $bg-brightblue;
+    }
+  }
+
+  &.flip-bg-lightblue {
+    .flip-boxes {
+      border-bottom: 2px solid $bg-lightblue;
+    }
+    .flip-back {
+      background-color: $bg-lightblue;
+    }
+    .image-wrapper {
+      &:after {
+        border: 15px solid $bg-lightblue;
+        border-bottom-color: $white;
+        border-right-color: $white;
+      }
+    }
+    .flip-over-content {
+      background: $bg-lightblue;
+    }
+    .flip-rollover {
+      &:after {
+        border: 15px solid $bg-lightblue;
+        border-bottom-color: $white;
+        border-left-color: $white;
+      }
+    }
+    .flip-card-btn a {
+      background: $bg-lightblue;
+    }
+  }
+}
+
+.mobile-stack {
+  &.flip-bg-red {
+    h2 {
+      color: $bg-red;
+    }
+    .flip-card-btn {
+      background: $bg-red;
+    }
+    .flip-back {
+      background-color: $flip-rollover;
+      color: $card-text-color;
+      transform: rotateY(180deg);
+    }
+  }
+  &.flip-bg-brightblue {
+    h2 {
+      color: $bg-brightblue;
+    }
+    .flip-card-btn {
+      background: $bg-brightblue;
+    }
+  }
+
+  &.flip-bg-lightblue {
+    h2 {
+      color: $bg-lightblue;
+    }
+    .flip-card-btn {
+      background: $bg-lightblue;
+    }
+  }
+  &.flip-bg-darkblue {
+    h2 {
+      color: $bg-darkblue;
+    }
+    .flip-card-btn {
+      background: $bg-darkblue;
+    }
+  }
+  &.flip-bg-green {
+    h2 {
+      color: $bg-green;
+    }
+    .flip-card-btn {
+      background: $bg-green;
+    }
+  }
+  text-align: center;
+  .field-subtext {
+    margin-top: -25px;
+  }
+  .flip-card-btn {
+    width: 200px;
+    border: 1px solid $card-text-color;
+    margin: auto;
+    //   background-color: #d56879;
+    a {
+      //   @include montserrat-font-stack();
+      font-weight: 700;
+      color: $card-text-color;
+      font-size: 12px;
+      border: none;
+    }
+  }
+}
+
+.flip-over-card {
+  display: flex;
+  justify-content: center;
+
+  .flip-boxes {
+    background-color: transparent;
+    width: 256px;
+    height: 256px;
+    
+    &:hover{
+      border-bottom: none;
+    }
+  }
+ 
+
+  .flip-box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    align-content: stretch;
+    min-height: 256px;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    border-top: 0;
+    border: 15px solid transparent;
+    font-family: 'Montserrat',serif;
+  }
+
+  .flip-boxes:hover .flip-box {
+    transform: rotateY(180deg);
+  }
+
+  .flip-front,
+  .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-front {
+    background-color: $card-text-color;
+    color: $bg-black;
+  }
+
+  .flip-back {
+    background-color: $flip-rollover;
+    color: $card-text-color;
+    transform: rotateY(180deg);
+  }
+  .card-wrapper {
+    position: relative;
+    margin-bottom: 35px;
+    backface-visibility: hidden;
+    max-width: 345px;
+  }
+
+  .image-wrapper {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      border: 15px solid $bottom-corner;
+      border-bottom-color: $white;
+      border-right-color: $white;
+    }
+  }
+
+  .flip-rollover {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 15px solid $bottom-corner;
+      border-bottom-color: $white;
+      border-left-color: $white;
+    }
+  }
+
+  .flip-over-eyebro {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.175rem;
+    justify-content: left;
+    align-items: flex-start;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+    right: 6px;
+    position: absolute;
+    top: 10px;
+    background: $card-eyebro-bg;
+    color: $card-eyebro-color;
+    padding: 5px 8px;
+    width: 100px;
+    text-align: left;
+
+    @include respond-to(desktop) {
+      width: 139px;
+    }
+  }
+
+  .field-image {
+    padding: 0;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+
+  .flip-over-content {
+    position: absolute;
+    top: 50%;
+    background: $flip-rollover;
+    color: $card-text-color;
+    padding: 15px;
+    font-size: 1.5rem;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 50px);
+    width: 100%;
+    text-align: center;
+  }
+
+  .field-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $card-title-color;
+  }
+
+  .flip-over-subtitle {
+    font-weight: 500;
+    color: $card-sub-title-color;
+    font-size: 1rem;
+    word-spacing: 1px;
+    padding-bottom: 10px;
+  }
+
+  .flip-card-btn a {
+    border: 1px solid $card-btn-color;
+    background: $flip-rollover;
+    padding: 5px 15px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $card-btn-color;
+  }
+}
+
+// $card-bg: #1b2d61;
+// $flip-rollover: #0083be;
+// $bottom-corner: #0083be;
+// $card-text-color: #ffffff;
+// $card-title-color: #ffffff;
+// $card-btn-color: #ffffff;
+// $card-sub-title-color:#ffffff;
+// $card-eyebro-bg:#ffffffb3;
+// $card-eyebro-color:#5b869b;
+
+// .flip-over-card {
+//     display: flex;
+//     justify-content: center;
+
+//     .card-wrapper {
+//         position: relative;
+//         margin-bottom: 30px;
+//         -webkit-perspective: 1000;
+//         perspective: 1000;
+//         backface-visibility: hidden;
+//         max-width: 345px;
+//     }
+
+//     .flip-front,
+//     .flip-back {
+//         position: relative;
+//         background-color: $card-bg;
+//         color: $card-text-color;
+//         -webkit-transition: transform 1s;
+//         transition: transform 1s;
+//         transform-style: preserve-3d;
+
+//     }
+
+//     .image-wrapper {
+//         // flip front
+//         z-index: 10;
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             bottom: 0;
+//             right: 0;
+//             width: 30px;
+//             height: 30px;
+//             border: 15px solid $bottom-corner;
+//             border-bottom-color: #fff;
+//             border-right-color: #fff;
+//         }
+
+//         &:hover {
+//             transform: rotateY(180deg);
+//             z-index: -1;
+//         }
+//     }
+
+//     .flip-rollover {
+//         // flip back
+//         background-color: $flip-rollover;
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         bottom: 0;
+//         width: 100%;
+//         z-index: 6;
+//         transform: rotateY(-180deg);
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             width: 30px;
+//             height: 30px;
+//             border: 15px solid #0000;
+//             border-bottom-color: #fff;
+//             border-left-color: #fff;
+//         }
+
+//         &:hover {
+//             transform: rotateY(0deg);
+//             z-index: 10;
+//         }
+//     }
+
+//     .flip-over-eyebro {
+//         font-size: 0.875rem;
+//         font-weight: 600;
+//         letter-spacing: 0.175rem;
+//         justify-content: left;
+//         align-items: flex-start;
+//         -webkit-transition: transform 1s;
+//         transition: transform 1s;
+//         right: 6px;
+//         position: absolute;
+//         top: 10px;
+//         background: $card-eyebro-bg;
+//         color: $card-eyebro-color;
+//         padding: 5px 8px;
+//         width: 100px;
+//         text-align: left;
+
+//         @include respond-to(desktop) {
+//             width: 139px;
+//         }
+//     }
+
+//     .field-image {
+//         padding: 0;
+
+//         img {
+//             width: 100%;
+
+//         }
+//     }
+
+//     .flip-over-content {
+//         position: absolute;
+//         top: 50%;
+//         background: #0000;
+//         color: $card-text-color;
+//         padding: 15px;
+//         font-size: 1.5rem;
+//         left: 50%;
+//         transform: translate3d(-50%, -50%, 50px);
+//         width: 100%;
+//         text-align: center;
+//     }
+
+//     .field-title {
+//         font-size: 1.8rem;
+//         margin-top: 20px;
+//         margin-bottom: 10px;
+//         font-weight: 500;
+//         line-height: 1.1;
+//         color: $card-title-color;
+//     }
+
+//     .flip-over-subtitle {
+//         font-weight: 500;
+//         color: $card-sub-title-color;
+//         font-size: 1rem;
+//         word-spacing: 1px;
+//         padding-bottom: 10px;
+//     }
+
+//     .flip-card-btn a {
+//         border: 1px solid $card-btn-color;
+//         background: #0000;
+//         padding: 5px 15px;
+//         border-radius: 7px;
+//         font-size: 1.2rem;
+//         font-weight: 600;
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         color: $card-btn-color;
+//     }
+// }

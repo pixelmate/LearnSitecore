@@ -1,0 +1,27 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+
+.component {
+  &.rich-text {
+    .fourpaws-rte {
+      background-color: $bg-pink;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 40px;
+
+      h1 {
+        color: $text-light-blue;
+        font-weight: 600;
+        font-size: 3rem;
+      }
+
+      p {
+        color: $text-light-blue;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,515 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "base/bootstrap/bootstrap";
+
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0px;
+  // height: auto !important;
+}
+
+body {
+  @include opensans-font-stack();
+  position: relative;
+  font-size: 1.6rem;
+  overflow: auto;
+  color: $text-basic;
+  line-height: $line-height;
+  //background: $page-bg;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: auto !important;
+
+  &.on-page-editor {
+    background: $page-bg-editor !important;
+  }
+
+  // Temperory remove unwanted space below footer ...
+  > img {
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.center {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+a {
+  color: $text-basic;
+  cursor: pointer;
+
+  // font-size: 0.85em;
+  &:hover {
+    color: $text-basic-active;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2em;
+
+  a {
+    line-height: 1.15;
+  }
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.xa-variable {
+  border: 0px;
+  padding: 1px;
+  margin: 0px;
+  background-color: #ebebe4;
+  color: #545454;
+  user-select: none;
+  pointer-events: none;
+}
+
+/*=======================================
+    Global spacing 
+==========================================*/
+.space-md-bottom {
+  margin-bottom: 3rem;
+}
+
+.space-sm-bottom {
+  margin-bottom: 2rem;
+}
+
+.space-lg-bottom {
+  margin-bottom: 4rem;
+}
+
+.space-xl-bottom {
+  margin-bottom: 5rem;
+}
+
+.space-sm-top {
+  margin-top: 2rem;
+}
+
+.space-md-top {
+  margin-top: 3rem;
+}
+
+.space-lg-top {
+  margin-top: 4rem;
+}
+
+.space-xl-top {
+  margin-top: 5rem;
+}
+
+// Mobile full with
+.component {
+  &.mobile-full-width {
+    @include respond-to(mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+//Navigation Bar fix
+#breadcrumbMenuSubcontrol_context_menu * {
+  box-sizing: initial;
+}
+
+.indent-top {
+  padding-top: 3rem;
+}
+
+.indent-bottom {
+  padding-bottom: 3rem;
+}
+
+.indent-top-sm {
+  padding-top: 2rem;
+}
+
+.indent-bottom-sm {
+  padding-bottom: 2rem;
+}
+
+.indent-bottom-large {
+  padding-bottom: 10rem;
+}
+
+.indent-bottom-xl {
+  padding-bottom: 20rem;
+}
+
+.indent-top-large {
+  padding-bottom: 10rem;
+}
+
+.indent-top-xl {
+  padding-bottom: 20rem;
+}
+
+@include respond-to(tab) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  .indent-top {
+    padding-top: 5.5rem;
+  }
+
+  .indent-bottom {
+    padding-bottom: 5.5rem;
+  }
+}
+
+.position-right {
+  text-align: right;
+}
+
+//End navigation bar fix
+// background color and child according that background color
+
+/* important is uing for override current class property */
+
+.gray-bg {
+  background-color: $gray-bg;
+}
+
+.light-green-bg {
+  background-color: $light-green !important;
+
+  * {
+    color: $dark-green !important;
+    border-color: $dark-green !important;
+  }
+
+  .sxa-btn {
+    a {
+      background-color: $bg-transparent;
+      border: 1px solid $dark-green;
+      color: $dark-green;
+    }
+  }
+}
+
+.dark-green-bg {
+  background-color: $dark-green !important;
+
+  * {
+    color: $white !important;
+    border-color: $white !important;
+  }
+
+  .sxa-btn {
+    a {
+      background-color: $bg-transparent;
+      border: 1.2px solid $white;
+    }
+  }
+}
+
+.white-bg {
+  background-color: $white !important;
+
+  * {
+    color: $text-basic !important;
+    border-color: $bg-black !important;
+  }
+
+  .sxa-btn-primary {
+    a {
+      background-color: $bg-transparent;
+      border-color: $text-basic;
+    }
+  }
+}
+
+.orange-bg {
+  background-color: $orange !important;
+
+  * {
+    border-color: $white !important;
+
+    &:not(a) {
+      color: $white !important;
+    }
+  }
+
+  .sxa-btn-primary {
+    a {
+      background-color: $white;
+      color: $orange;
+      border: none;
+
+      &:hover {
+        background-color: $dark-orange-hover;
+        color: $white;
+        transform: none;
+      }
+    }
+  }
+}
+
+.dark-gray-bg {
+  background-color: $text-secondary !important;
+
+  * {
+    color: $white !important;
+    border-color: $white !important;
+  }
+
+  .sxa-btn-primary {
+    a {
+      background-color: $bg-transparent;
+      border: 1.2px solid $white;
+    }
+  }
+}
+
+.blue-bg {
+  background-color: $bg-blue-active !important;
+
+  * {
+    color: $white !important;
+    border-color: $white !important;
+  }
+
+  .sxa-btn-primary {
+    a {
+      background-color: $bg-transparent;
+      border: 1.2px solid $white;
+    }
+  }
+}
+
+.light-gray-bg {
+  background-color: $bg-light-gray;
+
+  * {
+    color: $text-black !important;
+    border-color: $text-black !important;
+  }
+
+  .sxa-btn-primary {
+    a {
+      background-color: $bg-transparent;
+      border: 1.2px solid $text-black;
+    }
+  }
+}
+
+/* %bg-angled-gray {
+    -webkit-clip-path: polygon(37.535% 0, 100% 2.449vw, 100% calc(97.551%), 65% 100%, 0% calc(97.551%), 0% 2.449vw);
+    clip-path: polygon(37.535% 0, 100% 2.449vw, 100% calc(97.551%), 65% 100%, 0% calc(97.551%), 0% 2.449vw);
+    margin: 40px 0px;
+    padding: 8.333vw 6.666vw 11vw;
+    transform: translate3d(0, 0, 0);
+    background-color: $bg-gray;
+}
+
+.component {
+    &.bg-angled-gray {
+        >.component-content {
+            @extend %bg-angled-gray;
+            .bg-angled-gray {
+                padding: 0;
+                margin: 0;
+                background-color: $bg-transparent;
+                clip-path: none;
+            }
+        }
+    }
+
+}
+
+.bg-angled-gray:not(.component.content) {
+    @extend %bg-angled-gray;
+} */
+
+.bg-red {
+  background-color: $accordion-red;
+
+  * {
+    color: $white !important;
+    border-color: $white !important;
+  }
+}
+
+.indigo-blue-bg {
+  background-color: $indigo-blue-bg;
+}
+
+
+
+.dark-blue-bg {
+  background-color: $dark-blue-bg;
+}
+
+/* .component {
+    &.content-green {
+        * {
+            color: $dark-green !important;
+            border-color: $dark-green !important;
+        }
+        .CTA,
+        a {
+            &:hover {
+                background-color: $dark-green;
+                color: $white;
+            }
+        }
+    }
+} */
+
+// positioning
+.position-center {
+  .row {
+    justify-content: center;
+  }
+}
+
+.image-center {
+  .row {
+    align-items: center;
+  }
+}
+
+// breadcrumb disable
+.breadcrumb-disable {
+  display: none;
+}
+
+// for display flex
+.display-flex {
+  display: flex;
+}
+
+//Borders
+
+.border-bottom-dark-gray {
+  border-bottom: 4px solid #dddddd;
+}
+
+//Positions
+@include respond-to(desktop) {
+  .absolute-position-desktop {
+    position: absolute;
+  }
+}
+
+.absolute-position {
+  position: absolute;
+}
+
+.relative-position {
+  position: relative;
+}
+
+.align-bottom-position {
+  bottom: 0;
+}
+
+.align-top-position {
+  top: 0;
+}
+
+.align-left-position {
+  left: 0;
+}
+
+.align-right-position {
+  right: 0;
+}
+
+//negative margin
+.margin-negative-bottom {
+  margin-bottom: -30px;
+}
+
+//margin auto
+.auto-margin {
+  margin: auto;
+}
+
+//mobile hide
+@include respond-to(mobile) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+.position-center {
+  text-align: center;
+}
+
+@include respond-to(desktop-header) {
+  #main-margin {
+    margin-top: 8rem;
+  }
+}
+
+.header-shell {
+  &.variant-2 {
+    &.scEnabledChrome{
+      flex: 0 0 100%;
+    max-width: 100%;
+    }
+  }
+}
+.on-page-editor{
+  main{
+    min-height: 60rem;    
+  }  
+}

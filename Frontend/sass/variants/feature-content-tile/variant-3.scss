@@ -1,0 +1,83 @@
+//3 Row images
+.heading-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+    h2 {
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: $orange;
+    }
+}
+
+.slick-dots {
+    bottom: inherit;
+    margin-top: 20px;
+}
+
+.body-copy {
+    .content-col {
+       
+        margin: 0 0 65px 0;
+        height: auto;
+        figure {
+            height: auto;
+            margin: 0;
+            .desktop-img {
+                display: none;
+            }
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .figcaption {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h2 {
+                    font-size: 1.6rem;
+                    color: $grey-white;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@include respond-to(tab) {
+    .heading-wrapper {
+        text-align: left;
+        //margin-bottom: 30px;
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: $orange;
+        }
+        .slick-dots {
+            margin-top: 0;
+        }
+    }
+    .body-copy {
+        .content-col {
+            margin-bottom: 20px;
+            figure {
+                height: auto;
+                .mobile-img {
+                    display: none;
+                }
+                .desktop-img {
+                    display: block;
+                }
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+                .figcaption {
+                    display: none;
+                }
+            }
+        }
+    }
+}

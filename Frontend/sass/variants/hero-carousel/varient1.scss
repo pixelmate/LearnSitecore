@@ -1,0 +1,145 @@
+.body-copy {
+    width: 85%;
+    position: relative;
+    border-color: $white;
+    min-height: 294px;
+    max-width: 46.7rem;
+    padding: 15px;
+    margin: 0 auto;
+
+    .field-slidecardlogo {
+        text-align: center;
+    }
+
+    img {
+        max-width: 35%;
+        margin: 1rem auto 0.7rem;
+    }
+}
+
+.slick-slide {
+    line-height: 0;
+
+    .slide {
+        line-height: $line-height;
+    }
+}
+
+.slick-dots {
+    top: 295px;
+    bottom: auto;
+}
+
+.mobile-img {
+    height: 330px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.caption {
+    text-align: center;
+    margin: auto;
+
+    h2 {
+        color: $bg-blue-dark;
+        font-weight: 600;
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .field-slidecardsubtext {
+        font-size: 1em;
+        color: $text-basic;
+    }
+}
+
+.slide:not(.wrap) {
+    background-position: 35% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 371px;
+    position: relative;
+}
+
+.slick-prev,
+.slick-next {
+    height: 100%;
+    width: 10%;
+
+    &:before,
+    &:after {
+        color: $white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@include respond-to(tab) {
+    .slick-dots {
+        top: 415px;
+    }
+
+    .mobile-img {
+        height: 450px;
+    }
+
+    .caption {
+        max-width: 80%;
+    }
+}
+
+@include respond-to(desktop) {
+    .slick-dots {
+        bottom: 25px;
+        top: auto;
+    }
+
+    .slide:not(.wrap) {
+        background-size: cover;
+        min-height: 471px;
+        background-position: 35% 60%;
+        background-color: $slider-bg-gray;
+    }
+
+    .body-copy {
+        background: $offwhite;
+        border-radius: 0px 50px 50px 50px;
+        float: right;
+        position: relative;
+        margin: 0 100px 0 0;
+        max-width: 46.7rem;
+        transform: translateY(32%);
+
+        &.overlay-left {
+            float: left;
+            margin: 0 0 0 100px;
+        }
+
+        .field-slidecardlogo {
+            text-align: center;
+        }
+
+        img {
+            max-width: 35%;
+            margin: 1rem auto 0.7rem;
+        }
+    }
+
+    .mobile-img {
+        display: none;
+    }
+}
+@include respond-to(below-tab) {   
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+}
+
+&:not(.responsive-carousel){
+    @include respond-to(below-tab) {
+        .slide:not(.wrap) {
+            background-color: $white  !important;
+        }
+    }
+}

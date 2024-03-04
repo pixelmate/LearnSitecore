@@ -1,0 +1,6 @@
+projectKey=CGP2
+serverUrl=http://localhost:9000
+serverVersion=9.4.0.54424
+dashboardUrl=http://localhost:9000/dashboard?id=CGP2
+ceTaskId=AYRcM_l7Mf_TDCX40WXb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYRcM_l7Mf_TDCX40WXb

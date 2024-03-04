@@ -1,0 +1,182 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+.component {
+  &.hubspot-form {
+    //padding: 20px 5%;
+    .hs-form {
+      fieldset {
+        max-width: 100%;
+      }
+      textarea {
+        resize: none;
+        overflow: auto;
+      }
+      label {
+        display: inline-block;
+        font-weight: 400;
+        span {
+          color: $text-secondary;
+          font-weight: 600;
+        }
+      }
+      .form-columns-1 {
+        .input {
+          .hs-input,
+          input[type="email"] {
+            max-width: 98%;
+            min-width: 98%;
+            box-shadow: none;
+          }
+        }
+      }
+      .hs-input,
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        color: $product-description-body;
+        background-color: $white;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 48px;
+        min-width: 170px;
+        width: 100%;
+      }
+      .hs-error-msgs {
+        li {
+          label {
+            font-weight: 600;
+            color: $text-secondary;
+            margin-top: 5px;
+          }
+        }
+      }
+      .input {
+        select {
+          background-image: url(../images/drop_form_item.png);
+          background-position: 99% 50%;
+          background-repeat: no-repeat;
+          text-align: center;
+          background-size: 17px 18px;
+          option {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            left: 0px;
+            z-index: 100;
+            background-color: $white;
+            border: 1px solid $border-gray;
+            color: $text-secondary;
+            text-align: left;
+            line-height: 60px;
+            min-width: 150px;
+            width: 150px;
+          }
+        }
+      }
+      .hs-form-booleancheckbox {
+        label {
+          input[type="checkbox"] {
+            visibility: hidden;
+            width: 28px;
+            height: 28px;
+            display: inline;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    ul {
+      margin-bottom: 0;
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        margin-bottom: 0;
+        label {
+          margin-bottom: 0;
+          color: $border-dark;
+        }
+        span {
+          color: $border-dark;
+          font-weight: 400;
+          margin-left: 15px;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+    .hs-form-booleancheckbox,
+    .hs-form-checkbox {
+      width: 500px;
+      position: relative;
+      margin-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-width: 100%;
+    }
+    .hs-form-booleancheckbox {
+      label {
+        span {
+          position: relative;
+          width: 500px;
+          display: inline;
+          margin-left: 40px;
+          max-width: 100%;
+          &::before {
+            content: "";
+            position: absolute;
+            margin-left: -45px;
+            top: -8px;
+            width: 30px;
+            height: 30px;
+            background: url(../images/box-checked.png);
+            background-size: 30px 30px;
+          }
+        }
+        input[type="checkbox"]:checked + span:before {
+          background: url(../images/box-checked.png);
+          background-size: 30px 30px;
+        }
+        input[type="checkbox"]:not(:checked) + span:before {
+          background: url(../images/box-notchecked.png);
+          background-size: 30px 30px;
+        }
+      }
+    }
+    .hs-form-booleancheckbox {
+      label {
+        .hs-form-required {
+          display: none;
+        }
+      }
+    }
+    input[type="submit"] {
+      border-color: $orange;
+      background-color: $orange;
+      font-size: 1em;
+      font-weight: 400;
+      color: $white;    
+      padding: 0 15px;
+      height: 40px;
+      line-height: 40px;
+      min-width: 100px;
+      text-transform: uppercase;
+      border-radius: 15px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -o-border-radius: 20px;
+      border: 1px solid $border-gray;
+    }
+    @include respond-to(desktop) {
+      // padding: 40px;
+      .hs_submit {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+}

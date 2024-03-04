@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.XA.Foundation.IOC</name>
+    </assembly>
+    <members>
+        <member name="M:Sitecore.XA.Foundation.IoC.ServiceCollection.ServiceCollectionExtensions.IsWildcardMatch(System.String,System.String)">
+            <summary>
+            Checks if a string matches a wildcard argument (using regex)
+            </summary>
+        </member>
+    </members>
+</doc>

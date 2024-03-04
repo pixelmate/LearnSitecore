@@ -1,0 +1,205 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+@import "base/fontawesome/font-awesome-mix-var";
+
+.component {
+  &.article-detail {
+    &.content {
+      &.variant-2 {
+        &.related-articles {
+          padding: 0rem;
+        }
+      }
+    }
+  }
+}
+
+.article-detail {
+  .related-articles {
+    .inner-wrap {
+      padding: 0 2rem !important; //particlulary for article detail page
+    }
+  }
+}
+
+.component {
+  &.article-detail {
+    .breadcrumb {
+      padding: 0px;
+      ol {
+        margin: 0px;
+        li {
+          margin: 0px;
+        }
+      }
+    }
+    .article-right {
+      .related-articles {
+        padding: 2rem;
+        position: relative;
+        background: linear-gradient(
+              to left bottom,
+              transparent 50%,
+              rgba(0, 0, 0, 0.4) 0
+            )
+            no-repeat 100% 0/3.2rem 3.2rem,
+          linear-gradient(-135deg, transparent 2.4rem, #f1ede9 0);
+      }
+      .component {
+        &.variant-1 {
+          .popular-products {
+            .inner-wrap {
+              .row {
+                .image-holder {
+                  a {
+                    img {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .article-left {
+    .article-content-right,
+    .author-name {
+      text-align: right;
+    }
+    .title {
+      h1 {
+        border: none;
+        pointer-events: none;
+        font-size: calc(2.1rem);
+        margin: 20px 10px 10px 10px;
+      }
+    }
+  }
+}
+
+@include respond-to(tab) {
+  .container {
+    &.article-detail {
+      max-width: 100%;
+      padding: 0px 10px 0px 10px;
+      .article-left {
+        .article-content-right,
+        .author-name {
+          text-align: right;
+        }
+      }
+      .component-content {
+        img {
+          width: 100%;
+        }
+      }
+      .article-right {
+        .container {
+          max-width: 100%;
+          .inner-wrap {
+            padding: 7rem;
+          }
+        }
+        .variant-1 {
+          .popular-products {
+            padding: 7rem;
+            .image-holder {
+              a {
+                width: 100%;
+                img {
+                  max-width: 100%;
+                }
+              }
+            }
+            .body-copy {
+              h3 {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .article-detail {
+    .article-right {
+      .inner-wrap {
+        padding: 2rem !important; //Applied only for article detail pages
+      }
+    }
+  }
+  .container {
+    &.article-detail {
+      width: 1200px;
+      padding: 0px 20px 0px 10px;
+      .component-content {
+        img {
+          width: auto;
+          margin-top: 2rem;
+        }
+      }
+      .article-left {
+        border-right: 1px solid $article-border;
+        .title {
+          h1 {
+            font-size: 4.8rem;
+          }
+        }
+      }
+      .article-right {
+        .related-articles {
+          margin: 20px 0px 20px 20px;
+          padding: 0px 20px 0px 20px;
+          background: none;
+          .inner-wrap {
+            padding: 2rem; //not able to find this
+            position: relative;
+            background: linear-gradient(
+                  to left bottom,
+                  transparent 50%,
+                  rgba(0, 0, 0, 0.4) 0
+                )
+                no-repeat 100% 0/3.2rem 3.2rem,
+              linear-gradient(-135deg, transparent 2.4rem, #f1ede9 0);
+            a {
+              color: #333;
+              text-decoration: none;
+            }
+            .caption {
+              padding: 9px;
+              padding-bottom: 2rem;
+            }
+          }
+        }
+        .variant-1 {
+          margin: 20px 0px 20px 20px;
+          padding: 0 20px 0 20px;
+          background: none;
+          .popular-products {
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(
+                  to left bottom,
+                  transparent 50%,
+                  rgba(0, 0, 0, 0.4) 0
+                )
+                no-repeat 100% 0/3.2rem 3.2rem,
+              linear-gradient(-135deg, transparent 2.4rem, #f1ede9 0);
+            .body-copy {
+              h3 {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

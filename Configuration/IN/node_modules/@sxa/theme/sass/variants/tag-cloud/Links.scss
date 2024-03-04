@@ -1,0 +1,20 @@
+span.field-title {
+    &.tag-links {
+        border-radius: 5px;
+        padding: 5px $default-padding;
+        display: inline;
+        &:last-child {
+            margin-right: 0;
+        }
+        .tag-usages {
+            &:before {
+                content: "(";
+            }
+            &:after {
+                content: ")";
+            }
+            font-size: inherit;
+            font-weight: bold;
+        }
+    }
+}

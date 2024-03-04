@@ -1,0 +1,43 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+.component {
+    &.teaser-promo {
+        /* Left Background Image with Content and Heading on Right */
+        &.variant-1 {
+            @import "variants/component-teaser-promo/variant-1.scss";
+        }
+        /* Banner with text and image */
+        &.variant-2 {
+            @import "variants/component-teaser-promo/variant-2.scss";
+        }
+        /* Banner with RTE and CTA */
+        &.variant-3 {
+            margin: 4rem 0;
+            padding: 3rem 0;
+            //background-color: $light-green;
+            @import "variants/component-teaser-promo/variant-3.scss";
+        }
+        /* Three column layout with  text images  and CTA button */
+        &.variant-4 {
+            margin: 3rem 0;
+            @import "variants/component-teaser-promo/variant-4.scss";
+        }
+        &.variant-5 {
+            margin: 3rem 0;
+            background-color: $grey-white;
+            @import "variants/component-teaser-promo/variant-5.scss";
+        }
+    }
+}
+
+.on-page-editor {
+    .component {
+        &.teaser-promo {
+            .field-teaserimage {
+                display: block;
+            }
+        }
+    }
+}

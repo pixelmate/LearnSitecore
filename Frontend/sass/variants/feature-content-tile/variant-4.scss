@@ -1,0 +1,82 @@
+// 2 column 3 row grid
+.slick-dots {
+    bottom: 0px;
+    position: static;
+}
+
+.wrap {
+    .inner-wrap {
+        .desktop-img {
+            img {
+                display: none;
+            }
+        }
+        .mobile-img {
+            padding: 0 10px;
+            img {
+                width: 100%;
+                margin: auto
+            }
+        }
+        .body-copy {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            text-align: center;
+            max-width: 95%;
+            h2 {
+                font-size: 1.8rem;
+                color: $darkgrey-color;
+            }
+            p {
+                color: $darkgrey-color;
+                font-size: 1.4rem;
+            }
+        }
+        @include respond-to(tab) {
+            .body-copy {
+                h2 {
+                    font-size: 3rem;
+                }
+                p {
+                    font-size: 2.4rem;
+                }
+                a {
+                    font-size: 2.6rem;
+                    padding: 10px 52px;
+                }
+            }
+        }
+        @include respond-to(desktop) {
+            position: relative;
+            .body-copy {
+                padding-top: 0;
+                text-align: left;
+                position: absolute;
+                bottom: 16%;
+                max-width: 50%;
+                padding-left: 30px;
+                padding-bottom: 0;
+                h2 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+                a {
+                    font-size: 1.2rem;
+                    padding: 4px 20px;
+                }
+            }
+            .desktop-img {
+                img {
+                    display: block;
+                }
+            }
+            .mobile-img {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}

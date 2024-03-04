@@ -1,0 +1,119 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+
+.component {
+    .sds-labels {
+        .inner-wrap{
+            .body-copy{
+                @include respond-to(desktop){
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+        table {
+
+            width: 100%;
+            border: none;
+
+            thead {
+                th {
+                    background-color: $offwhite;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+
+                    &:first-child {
+                        border-top-left-radius: 14px;
+                        border-bottom-left-radius: 14px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 14px;
+                        border-bottom-right-radius: 14px;
+                    }
+                }
+            }
+
+            tr {
+                border-bottom: 2px solid $offwhite;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                td{
+                    font-size: 1.6rem;
+                }
+            }
+
+            th,
+            td {                
+                text-align: center;
+                width: 16.6%;
+                border: none;
+                line-height: 3.2rem;
+
+                &:first-child {
+                    text-align: left;
+                    width: 50%;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .pdf-icon {
+                background-image: url("../images/file-pdf.svg");
+                vertical-align: middle;
+                width: 25px;
+                height: 33px;
+                display: inline-block;
+
+                &~span {
+                    padding: 0 1rem 0 .7rem;
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                }
+            }
+
+            @media screen and (max-width:991px) {
+                thead {
+                    display: none;
+                }
+
+                tr {
+                    display: block;
+                    padding: 14px 15px;
+                }
+
+                td {
+                    display: inline-block;
+                    width: auto;
+                    padding: .5rem;
+
+                    &:first-child {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @include respond-to(desktop) {
+
+                th,
+                td {
+                    padding: 14px 15px;
+                    &:first-child {
+                        padding-left: 2rem;
+                    }
+                }
+
+                .pdf-icon {
+
+                    &~span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

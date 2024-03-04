@@ -1,0 +1,168 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+
+.product-tab-accordion {
+    >.component-content {
+        >.container {
+            border: 2px solid $tab-border-color;
+        }
+    }
+
+    .nav-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 0;
+
+        li {
+            margin-left: .7rem;
+            display: flex;
+            flex: 1;
+            width: 100%;
+
+            @media screen and (max-width: 767px) {
+                margin-left: 0;
+                flex-basis: 100%;
+            }
+
+            a {
+                background-color: $tab-button-bg;
+                font-size: 1.6rem;
+                font-weight: 800;
+                color: $text-secondary;
+                padding: 2.0rem;
+                display: inline-block;
+                text-decoration: none;
+                line-height: 2.25rem;
+                width: 100%;
+
+                &.active {
+                    background-color: $tab-active-button-bg;
+                    color: $border-white;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: $tab-button-bg;
+                    color: $border-white;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+        }
+    }
+
+    .card {
+        border: none;
+        padding: 0 1.5rem 1.5rem;
+
+        &.fade {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .card-header {
+            h2 {
+                margin: 0;
+                position: relative;
+
+                button.btn-link {
+                    border: none;
+                    background: transparent;
+                    width: 100%;
+                    text-align: left;
+                    padding: 2rem;
+                    cursor: pointer;
+
+                    &::after,
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        background: $bg-black-active;
+                        width: 20px;
+                        height: 3px;
+                        right: 3rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: transform .5s ease-in-out;
+                    }
+
+                    &::after {
+                        top: 48%;
+                    }
+
+                    &[aria-expanded="false"] {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                }
+            }
+        }        
+
+    }
+
+
+    .card-body {
+        font-weight: 500;
+        font-size: 1.6rem;
+        padding: 1.5rem 0;
+
+    }
+    &:not(.product-tab){
+        // .tabs-accordion[expandbydefault="true"]{
+        //     .card{
+        //         &:first-child{
+        //             .collapse{
+        //                 height: auto;
+        //                 opacity: 1;
+        //             }
+        //         }
+        //     }
+        // }
+        .collapse {
+            display: block;
+            overflow: hidden;
+            padding: 0;
+            height: 0;
+            opacity: 0;
+            transition: height 0ms 400ms, opacity 400ms 0ms;
+
+            &.show {
+                padding: 1.5rem;
+                height: auto;
+                opacity: 1;
+                transition: height 0ms 0ms, opacity 600ms 0ms;
+            }
+        }
+    }
+
+    &.product-tab {
+        .card .card-header {
+            display: none;
+        }
+
+        .card .collapse {
+            display: block;
+        }
+
+        @include respond-to(tab) {
+            .card .card-header {
+                display: none;
+            }
+        }
+    }
+}
+
+@import "styles/tabs/*";
+@import "styles/tabs-overflow/*";

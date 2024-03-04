@@ -1,0 +1,10 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+.component {
+    &.utility-navigation {
+        @import "variants/component-brand-listing/variant-1.scss";
+        @import "variants/component-brand-listing/variant-2.scss";
+        
+    }
+}

@@ -1,0 +1,278 @@
+&.variant-3 {
+    .component {
+        &.plain-html {
+            .hamburger {
+                z-index: 2;
+                margin: 1rem;
+                left: 2%;
+                right: initial;
+                span {
+                    background-color: $white;
+
+                    &:first-child {
+                        margin-top: .6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .image {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        line-height: 0;
+        margin: 0 auto;
+        max-width: 190px;
+
+        .image-caption {
+            display: none;
+        }
+    }
+
+    //search
+
+    .component-content {
+        .search-box {
+            position: absolute;
+            right: 8%;
+            width: auto;
+            top: 2px;
+
+            label {
+                display: none;
+            }
+
+            .component-content {
+                position: absolute;
+                top: -6rem;
+                right: 1rem;
+                width: 90%;
+
+                .custom-search-box-button {
+                    flex-grow: initial;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    font-size: 0;
+                    padding: 5px 15px 0 10px;
+                }
+            }
+        }
+
+        .twitter-typeahead {
+            .search-box-input {
+                margin-left: -77vw;
+                width: 77vw;
+                height: 4.1rem;
+
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                display: none;
+                //out of box attaching bg color in js
+                background-color: $text-white !important;
+
+            }
+        }
+    }
+
+    //nav menu
+    .header-global-menu {
+        background-color: $light-green;
+        position: relative;
+
+        ul.items {
+            li.item {
+                padding: 10px 0px;
+                position: relative;
+
+                .has-sublist {
+                    position: relative;
+
+                    .scLooseFrameZone {
+                        overflow: initial;
+                    }
+
+                    &::after {
+                        @include fa-icon();
+                        content: $fa-var-caret-down;
+                        position: absolute;
+                        right: 2rem;
+                        top: 2.5rem;
+                        color: $dark-color;
+                        transform: translateY(-50%);
+                        font-size: 2rem;
+                        cursor: pointer;
+                    }
+
+                    >a {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                a {
+                    color: $white;
+                    font-size: 1.42rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                ul.sub-menu-list {
+                    z-index: 1;                    
+                    list-style: none;
+                    position: relative;
+                    background-color: transparent;
+                    padding: 15px 25px 0px 25px;
+                    box-shadow: none;
+                    transition: all 0.2s ease-in-out;
+
+                    li.sub-menu-item {
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .component {
+        &.search-box {
+            .custom-search-box-button {
+                background-color: transparent;
+                border: none;
+                color: $white;
+
+                &:before {
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+
+
+@include respond-to(desktop) {
+    &.variant-3 {
+        .container>.row {
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        //search
+
+        .component-content {
+            .search-box {
+                position: static;
+                padding: 3rem 0;
+
+                .component-content {
+                    position: static;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+
+                    .custom-search-box-button {
+                        margin: 0 0 auto auto;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .twitter-typeahead {
+                .search-box-input {
+                    margin: 0;               
+                    &:nth-child(1) {
+                        display: none;
+                    }
+                    background-color: $text-white !important;
+                    top: 3rem;
+                    width: 200px;
+                    left: calc(100% - 145px);                   
+                    position: absolute !important;
+                    margin-left:0;
+                }
+            }
+        }
+
+        //nav menu
+        .header-global-menu {
+            background-color: transparent;
+
+            ul.items {
+                li.item {
+                    padding: 32px 1vw 32px 1vw;
+                    position: relative;
+
+                    .has-sublist {
+                        a {
+                            &:before {
+                                left: 95%;
+                                top: 50%;
+                            }
+                        }
+                    }
+
+                    ul.sub-menu-list {                        
+                        position: absolute;
+                        padding: 10px 15px;
+                        top: 7rem;
+                        left: 0rem;
+                        border: 1px solid $text-white;
+                        flex-wrap: wrap;
+
+                        li.sub-menu-item {
+                            a {
+                                display: block;
+                                font-size: 1.3rem;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
+
+@include respond-to(large-desktop) {
+    &.variant-3 {
+
+        //nav menu
+        .header-global-menu {
+            padding: 0;
+
+            ul.items {
+                li.item {
+                    a {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.on-page-editor {
+    .header-shell.variant-3 {
+        position: static;
+        background-color: $dark-green;
+    }
+}
+
+.preview {
+    .header-shell.variant-3 {
+        position: static;
+        background-color: $dark-green;
+    }
+}

@@ -1,0 +1,175 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+.component {
+  &.richprofilelisting {
+    .profile-listing {
+      margin-top: 2.4rem;
+
+      .rich-profile {
+        position: relative;
+        margin-bottom: 2rem;
+
+        .rich-profile-wrap {
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            background-color: $bg-blue-active;
+            opacity: 76%;
+            position: absolute;
+            bottom: 0.4rem;
+            left: 0px;
+            width: 100%;
+            height: 65px;
+            z-index: 0;
+            transition: all ease-in-out 300ms;
+          }
+
+          &:hover {
+            &:before {
+              height: 100%;
+              z-index: 0;
+            }
+          }
+
+          .profile-image {
+            img {
+              width: 100%;
+            }
+          }
+
+          .profile-content {
+            height: 6.5rem;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+
+            h2 {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      .modal {
+        &.fade {
+          background-color: transparent;
+          &.richprofile-modal {
+            .modal-dialog {
+              -webkit-transform: translate(-50%, -50px);
+              transform: translate(-50%, -50px);
+              max-width: 95%;
+              width: 115rem;
+              left: 48%;
+              @include respond-to(desktop){
+                left: 50%;
+              }
+            }
+
+            .rich-profile-pop-up {
+              padding: 3rem;
+              position: relative;
+
+              @include respond-to(desktop) {
+                padding: 3rem 7.5rem 3rem 5rem;
+              }
+
+              .rich-profile {
+                .profile-image {
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+
+              .profile-heading {
+                h2 {
+                  border-bottom: 1px solid;
+                }
+              }
+
+              .profile-listheading {
+                h2 {
+                  &::before {
+                    display: none;
+
+                    @include respond-to(desktop) {
+                      left: 63%;
+                      content: "";
+                      display: block;
+                      height: 0.1rem;
+                      background: $black;
+                      width: 40%;
+                      position: absolute;
+                      top: 65%;
+                    }
+                  }
+                }
+              }
+
+              .profile-listheading {
+                margin-top: 3rem;
+              }
+
+              .profile-relatedlisting {
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include respond-to(desktop) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                }
+
+                .product-image {
+                  img {
+                    max-width: 12.5rem;
+                  }
+                }
+
+                .product-content {
+                  padding-left: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html:not(.on-page-editor){
+  .richprofile-modal {
+    margin-left: 0;
+    @include respond-to(desktop){
+      margin-left: 15px;
+    }
+  }
+}
+
+.on-page-editor {
+  .component {
+    &.richprofilelisting {
+      .profile-listing {
+        >.scLooseFrameZone {
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+          max-width: 25%;
+
+          >div {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

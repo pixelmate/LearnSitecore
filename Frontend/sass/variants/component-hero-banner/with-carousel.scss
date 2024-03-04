@@ -1,0 +1,181 @@
+&.with-carousel {
+    .wrap {
+        // background-color: $bg-gray;
+        position: relative;
+    }
+    figure {
+        margin: 0;
+    }
+    .slick-prev,
+    .slick-next {
+        &:before,
+        &:after {
+            color: $text-red;
+            font-size: 6rem;
+        }
+    }
+    .hero-container {
+        width: 100%;
+        padding: 12px;
+        h1 {
+            font-size: 22px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 13px;
+            margin: 0px;
+            color: $dark-color;
+        }
+        .slick-slider {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+        .slides {
+            -webkit-justify-content: space-between;
+            -khtml-justify-content: space-between;
+            -moz-justify-content: space-between;
+            justify-content: space-between;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -khtml-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .scLooseFrameZone {
+            overflow: initial;
+        }
+        .slick-list {
+            width: calc(100% - 90px) !important;
+            margin: auto;
+        }
+        .slick-slide {
+            text-align: center;
+            >div {
+                display: inline-block;
+            }
+        }
+        .slide {
+            padding: 4px;
+            margin-bottom: 20px;
+            //border: 1px solid $border-gray;
+            border-radius: 4px;
+            -webkit-transition: border 0.2s ease-in-out;
+            -o-transition: border 0.2s ease-in-out;
+            transition: border 0.2s ease-in-out;
+         
+            max-width: 80px;
+            height: 80px;
+            justify-content: center;
+            display: inline-block;
+            width: 100%;
+            border: none;
+            text-align: center;
+            position: relative;
+            .caption {
+                display: inline-block;
+                position: relative;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -khtml-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+            h2 {
+                margin: 0px;
+                font-size: 13px;
+                line-height: 22px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $text-black-light;
+                strong {
+                    font-weight: 700;
+                    color: $text-red-dark;
+                    white-space: nowrap;
+                }
+            }
+            img {
+                margin: 0 auto;
+                border: 5px solid $border-dark;
+                border-radius: 100%;
+                width: 90px;
+            }
+        }
+        a {
+            text-decoration: none;
+            &:hover,
+             :active {
+                h2 {
+                    strong {
+                        color: $text-black-light;
+                    }
+                }
+            }
+        }
+   
+        @include respond-to(mob-horizontal) {
+            h1 {
+                font-size: 50px;
+            }
+            .slick-list {
+                width: calc(100% - 160px) !important;
+            }
+            .slide {
+                width: 170px;
+                max-width: 170px;
+                height: 170px;
+                border: 5px solid $border-dark;
+                border-radius: 100%;
+                justify-content: center;
+                background-color: $white;
+                img {
+                    border: none;
+                }
+                .caption {
+                    padding: 0px;
+                    position: static;
+                    -webkit-transform: none;
+                    -khtml-transform: none;
+                    -moz-transform: none;
+                    transform: none;
+                }
+                h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+        @include respond-to(desktop) {
+            position: absolute;
+            padding: 60px;
+            width: 100%;
+            max-width: 1120px;
+            margin: auto;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            @include transform(translateX(-50%) translateY(-50%));
+            @include flex();
+            @include direction(column);
+            justify-content: center;
+            .slide {
+                @include flex();
+                @include direction(column-reverse);
+                .caption {
+                    position: static;
+                    -webkit-transform: translateY(20px);
+                    -khtml-transform: translateY(20px);
+                    -moz-transform: translateY(20px);
+                    transform: translateY(20px);
+                }
+            }
+            h1 {
+                font-size: 66px;
+                position: static;
+                padding: 0px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

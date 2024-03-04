@@ -1,0 +1,85 @@
+.row {
+    @include respond-to(desktop) {
+        >.scLooseFrameZone {
+            -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            overflow: hidden;
+
+            .col {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .col {
+        padding-bottom: 1.5rem;
+    }
+}
+
+// 3 column strucure
+.promo-tile {
+    padding: 0;
+
+    .field-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .field-data {
+        position: relative;
+        text-align: center;
+        //min-height: 190px;
+        padding: 15px 0;
+
+        @include respond-to(tab) {
+            text-align: left;
+        }
+
+        h2,
+        h3 {
+            line-height: 1.2;
+            color: inherit;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        p {
+            color: inherit;
+            font-size: 1.4rem;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+
+            @include respond-to(desktop) {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                text-transform: lowercase;
+            }
+        }
+
+        .field-subtext {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@include respond-to(tab) {
+    .promo-tile {
+        padding: 0;
+    }
+}

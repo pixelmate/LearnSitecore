@@ -1,0 +1,70 @@
+.row {
+  > .scLooseFrameZone {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    overflow: hidden;
+    .col {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  .col {
+    padding-bottom: 4rem;
+  }
+}
+.content-wrapper {
+  .inner-wrapper {
+    padding: 15px;
+    .copy-wrap {
+      position: relative;
+      overflow: hidden;
+      .field-image {
+        margin: 0;
+        img {
+          border-radius: 0.4rem;
+          width: 100%;
+        }
+      }
+      h3 {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 6px;
+        right: 0;
+        background: #fff;
+        font-size: 2.4rem;
+        padding: 0.625rem 1.25rem 1.25rem;
+        font-weight: 400;
+        color: $text-basic;
+        &::before {
+          box-sizing: content-box;
+          content: "";
+          display: block;
+          background: #fff;
+          padding: 100% 0 0;
+          position: absolute;
+          width: 300%;
+          height: 0;
+          top: 0;
+          left: -100%;
+          margin-top: -3%;
+          border-radius: 100%;
+          z-index: -1;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(bootstrap-mdDesktop) {
+  .content-wrapper {
+    .inner-wrapper {
+      padding: 20px 20px;
+    }
+  }
+}

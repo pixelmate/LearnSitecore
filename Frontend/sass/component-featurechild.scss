@@ -1,0 +1,10 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+.component {
+  &.featuredchildlist {
+    padding: 1.5rem;
+    @import "variants/component-featurechild/featurechild-default.scss";
+    @import "variants/component-featurechild/featurechild-variant1.scss";
+  }
+}

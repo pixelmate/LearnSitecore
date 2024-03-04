@@ -1,0 +1,174 @@
+&.mulitple-bottom-links {
+    .slide {
+        background-position: 35% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 545px;
+        position: relative;
+        background-color: $grey-white;
+    }
+    .slick-slide {
+        line-height: 0;
+        .slide {
+            line-height: $line-height;
+        }
+    }
+    .field-slidecardtitle {
+        right: 5%;
+        float: right;
+        margin-top: 100px;
+        min-width: 250px;
+        height: 120px;
+        margin-bottom: 30px;
+        img {
+            margin-left: auto;
+            margin-right: 10%;
+            max-width: 85%;
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        height: 100%;
+        width: 10%;
+        &:before,
+        &:after {
+            color: $orange;
+        }
+    }
+    .slick-dots {
+        top: auto;
+        right: 10%;
+        left: auto;
+        text-align: right;
+        max-width: 1170px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 60px;
+    }
+    .link-list-wrap {
+        position: absolute;
+        width: 100%;
+        bottom: 10%;
+        left: 0;
+    }
+    .bottom-links-list {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        .bottom-tile {
+            opacity: 0.5;
+            &.highlight {
+                opacity: 1;
+            }
+        }
+        >div {
+            display: inline-block;
+            max-width: 17%;
+            min-width: 159px;
+            overflow: initial;
+        }
+    }
+    // @include respond-to(below-tab) {
+    //     //overriding javascript display ...
+    // }
+    @media (max-width:959px) {
+        .slick-dots {
+            text-align: center;
+            bottom: 11px;
+            left: 0;
+        }
+        .slick-prev,
+        .slick-next {
+            top: 35%;
+        }
+        .link-list-wrap {
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            height: 150px;
+            padding: 15px 30px 30px;
+        }
+        .field-slidecardtitle {
+            position: absolute;
+            top: 74px;
+            z-index: 2;
+            right: 0%;
+        }
+        .bottom-links-list {
+            display: block;
+            >div {
+                &.bottom-tile {
+                    width: 150px;
+                    max-width: 150px;
+                    position: absolute;
+                    left: 5%;
+                    margin-bottom: -40px;
+                    display: none;
+                    img {
+                        display: block;
+                        width: 125px;
+                        max-width: 80%;
+                        z-index: 1;
+                    }
+                    &.highlight {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .slide {
+            background-size: auto 350px;
+            background-position: 30% 0%;
+            height: 350px;
+            min-height: 350px;
+        }
+    }
+    @media (max-width:700px) {
+        .field-slidecardtitle {
+            top: 100px;
+            img {
+                margin: 0;
+                height: 130px;
+                bottom: 15px;
+                right: 0;
+                width: auto;
+                float: right;
+                padding-right: 15px;
+            }
+        }
+        .bottom-links-list {
+            >div {
+                &.bottom-tile {
+                    left: -15px;
+                }
+            }
+        }
+    }
+    @media (max-width:500px) {
+        .link-list-wrap {
+            padding-top: 15px;
+        }
+        .field-slidecardtitle {
+            img {
+                height: 70px;
+                bottom: 15px;
+                right: 0;
+            }
+        }
+    }
+    @media (max-width:300px) {
+        .field-slidecardtitle {
+            img {
+                height: 70px;
+                bottom: 40px;
+                right: 0;
+            }
+        }
+        .bottom-links-list {
+            >div {
+                &.bottom-tile {
+                    left: -15px;
+                }
+            }
+        }
+    }
+}

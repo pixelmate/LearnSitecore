@@ -1,0 +1,92 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+
+.component {
+  &.product-category-listing {
+    padding: 0;
+    > .component-content {
+      border: none !important;
+    }
+
+    .product-listing-wrapper {
+      text-align: center;
+      max-width: 114rem;
+      margin: 0 auto;
+      padding: 0;
+
+      &.threeColumn {
+        max-width: 90rem;
+
+        .product-category-card {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.product-category-card {
+  background-color: $product-card-bg;
+  margin: 20px;
+  width: 100%;
+  max-width: 205px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  &.with-title {
+    max-width: 220px;
+    min-height: 180px;
+    .card-image img {
+      max-height: 75px;
+      width: auto;
+    }
+  }
+  .component-clickable {
+    color: transparent;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    &:hover {
+      color: transparent;
+    }
+  }
+  @include respond-to(small-device) {
+    margin: 10px;
+  }
+
+  .card-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $product-card-title;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .card-image {
+    line-height: 1;
+    img {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .card-caption {
+    padding: 9px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .card-button {
+    &.sxa-btn {
+      a {
+        text-decoration: none;
+        background-color: $product-card-btn-bg;
+        color: $product-card-btn-color;
+        border-color: $product-card-btn-bg;
+      }
+    }
+  }
+}

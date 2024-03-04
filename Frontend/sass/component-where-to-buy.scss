@@ -1,0 +1,398 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+
+
+/*========================================
+      where to buy tab section
+==========================================*/
+.where-buy-section {
+  .nav-tabs-wrapper-inner {
+    padding: 0 15px;
+
+    @include respond-to(tab) {
+      display: none;
+    }
+
+    ul.nav-tabs {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        margin-bottom: -1px;
+        position: relative;
+        display: block;
+
+        a {
+          margin-right: -12px;
+          line-height: 1.42857143;
+          border: 1px solid transparent;
+          border-radius: 0 0 0 0;
+          border-bottom: 2px solid $orange;
+          position: relative;
+          display: block;
+          padding: 10px 15px;
+          font-size: 1.6rem;
+          text-decoration: none;
+          color: $orange;
+          font-weight: 700;
+
+          &.active {
+            color: $white;
+            background-color: $orange;
+            border: 1px solid $orange;
+            cursor: default;
+            border-radius: 20px;
+            border-bottom: 2px solid $orange;
+          }
+        }
+      }
+
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+        clear: both;
+      }
+    }
+  }
+
+  .store-locator-info {
+    min-height: 500px;
+    margin-top: 30px;
+
+    @include respond-to(tab) {
+      display: block !important;
+    }
+
+    @include respond-to(mobile) {
+      display: none;
+    }
+
+
+  }
+
+  .component-title {
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  .linked-thumbnail {
+    &.vertical {
+      @include respond-to(tab) {
+        display: block !important;
+      }
+
+      h3 {
+        @include respond-to(mobile) {
+          display: none;
+        }
+      }
+    }
+
+  }
+}
+
+/*========================================
+      where to buy Map component
+==========================================*/
+.store-locator {
+  width: 100%;
+
+  .component-title {
+    h3 {
+      border-bottom: 2px solid $orange;
+      color: $orange;
+      font-size: 2.4rem;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      margin: 0;
+    }
+  }
+
+  .store-locator-info {
+    min-height: 500px;
+    margin-top: 30px;
+
+    .zip-error {
+      display: none;
+      color: $orange;
+    }
+
+    .no-locations-found {
+      color: gray;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+
+      @include respond-to(desktop) {
+        text-align: center;
+        margin-top: 56px;
+      }
+    }
+
+    #search-result-list {
+      overflow-y: scroll;
+      float: left;
+      width: 47%;
+      overflow-x: hidden;
+      height: 180px;
+
+      .store-marker {
+        color: $orange;
+        font-weight: 600;
+        float: left;
+        margin-left: 10px;
+        font-size: 1.6rem;
+      }
+
+      .store-info {
+        padding-right: 34px;
+        margin-left: 39px;
+
+        h4 {
+          color: $orange;
+          font-size: 2rem;
+          font-weight: normal;
+        }
+
+        .store-website {
+          margin: -8px 0 11px;
+          font-size: 1.6rem;
+        }
+        .distance {
+          font-size: 14px;
+          
+        }
+        .directionsText {
+          float: right;
+          color: inherit;
+        }
+        p {          
+          a {
+            color: inherit;
+          }
+        }
+
+        
+
+        
+      }
+    }
+
+    .storeResultsMapContainer {
+      float: right;
+      width: 50%;
+
+      .google-map {
+        min-height: 350px;
+      }
+    }
+
+    .search-store-form {
+      .button-wrapper {
+        display: inline;
+      }
+
+      label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1.6rem;
+      }
+
+      #zipcode {
+        height: 40px;
+        width: 46%;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        color: #595a5c;
+        background-color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        padding: 5px 18px;
+
+
+      }
+
+      .form-group {
+
+        text-align: center;
+
+        @include respond-to(desktop) {
+          text-align: left;
+          display: inline;
+        }
+
+        h2 {
+          margin: 0;
+        }
+      }
+
+      #radius {
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;      
+        -webkit-appearance: menulist;
+        box-sizing: border-box;
+        align-items: center;
+        white-space: pre;
+        -webkit-rtl-ordering: logical;
+        background-color: -internal-light-dark-color($white, #3b3b3b);
+        cursor: default;
+        font: 400 13.3333px "Arial", sans-serif;
+        border: 1px solid #ddd;
+        border-color: -internal-light-dark-color(#767676, #c3c3c3);
+        border-image: initial;
+        height: 40px;
+        background-image: none;
+        color: #808080;      
+        border-radius: 8px;
+        margin-top: 7px;
+        width: 90px;
+        min-width: 0;
+        padding-right: 10px;
+        margin-right: auto;
+        margin-left: auto;    
+        text-align: left;
+        padding-left: 5px;
+        @include respond-to(desktop) {
+          margin-right: 50%;
+          margin-left: 69px;
+        }
+
+        option {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          left: 0px;
+          position: absolute;
+          z-index: 100;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          color: #f47523;
+          text-align: center;  
+          line-height: 60px;
+          min-width: 150px;
+          width: 150px;
+        }
+      }
+
+      .btn-default,
+      .score-alert {
+        cursor: pointer;
+        min-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        display: block;
+        margin-bottom: 20px;
+        background: gray;
+        margin-top: 8px;
+        outline: none;
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        color: $white; 
+        border-radius: 15px;
+        padding: 0px 25px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid $orange;
+        text-transform: uppercase;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -o-border-radius: 20px;
+
+        @include respond-to(desktop) {
+          background-color: $orange;
+          margin-left: 68px;
+          margin-top: 12px;
+          min-width: 113px;
+          height: 32px;
+          line-height: 32px;
+          border: 1px solid $border-white-gray;
+        }
+      }
+    }
+  }
+
+
+  @include respond-to(desktop) {
+    .store-locator-info {
+      .search-store-form {
+        width: 45%;
+        float: left;
+
+        form {
+          text-align: left;
+        }
+
+
+
+
+      }
+    }
+
+
+  }
+
+
+  @include respond-to(mobile) {
+    .store-locator-info {
+      .search-store-form {
+        margin: auto;
+        text-align: center;
+      }
+
+      .storeResultsMapContainer {
+        float: none;
+        width: 100%;
+      }
+
+      #search-result-list {
+        float: none;
+        width: 100%;
+        padding: 10px;
+        height: auto;
+      }
+    }
+
+  }
+
+
+
+  @include respond-to(desktop) {
+    .store-locator-info {
+      .search-store-form {
+        #zipcode {
+          height: 40px;
+          width: 77%;
+          min-width: 0;
+          padding: 0px;
+          line-height: 0;
+          font-size: 1.6rem;
+        }
+
+
+      }
+    }
+
+  }
+
+
+
+
+}

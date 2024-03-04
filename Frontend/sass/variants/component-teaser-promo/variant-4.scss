@@ -1,0 +1,73 @@
+/* Three column layout with each column having text images  and CTA button */
+
+.body-copy {
+    padding: 2rem 1.5rem;
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+.field-teaserimage {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    position: initial;
+    top: 0;
+    left: 0;
+    border: none;
+    height: auto;
+}
+
+.field-firstcta {
+    text-align: center;
+    padding-top: 2rem;
+    a {
+        text-transform: uppercase;
+    }
+}
+
+@include respond-to(desktop) {
+    .body-copy {
+        padding: 0 1.5rem;
+        h2 {
+            font-size: 2.6rem;
+        }
+        p {
+            font-size: 1.8rem;
+            padding-bottom: 2rem;
+        }
+    }
+    .field-teaserimage {
+        padding: 0;
+        margin: 0;
+    }
+    .field-firstcta {
+        padding-top: 0;
+    }
+}
+
+@include respond-to(large-desktop) {
+    .body-copy {
+        padding: 3rem 1.5rem;
+        h2 {
+            font-size: 3.2rem;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding-bottom: 2rem;
+        }
+    }
+    .field-firstcta {
+        text-align: left;
+        padding: 0;
+    }
+}

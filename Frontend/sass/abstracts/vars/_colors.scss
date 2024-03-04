@@ -1,0 +1,452 @@
+//Backgrounds colors
+$bg-transparent: transparent !default;
+$bg-basic-color: #ffffff !default;
+$bg-basic-color-active: #cccccc !default;
+$bg-light-gray: #f2f2f2 !default;
+$overlay-dark: rgba(0, 0, 0, 0.5);
+$bg-gray: #eee !default;
+$bg-light-gray-active: #dadada !default;
+$bg-gray-newsletter: #e6e2e7;
+$bg-blue: #89c6cc;
+$bg-blue-dark: #5b869b;
+$bg-blue-active: #0083be !default;
+$bg-blue-light: #add8e6;
+$bg-submenu: #edebeb !default;
+$bg-submenu-active: #f6f6f6 !default;
+$bg-black: #000;
+$black: #000;
+$bg-black-active: #3d3d3d;
+$white: #fff;
+$gray: #555555;
+$tab-border-color: #cfd1d2;
+$tab-button-bg: #cfd1d2;
+$tab-active-button-bg: #4a4a4c;
+$page-tab-bg: rgba(88, 89, 91, 0.4);
+$page-tab: rgba(88, 89, 91, 0.8);
+$background-grey: #e8e8ea;
+$background-white: #ffffff;
+$offwhite: rgba(255, 255, 255, 0.8);
+$offwhite-light: rgba(245, 245, 245, 0.2);
+$offwhite: rgba(245, 245, 245, 0.9);
+$grey-white: #8d8d8d;
+$orange: #f47523;
+$orange-dark: #d95c0b;
+$orange-primary: #f5ac1e;
+$dark-orange-hover: #de0000;
+$dark-green: #006e43;
+$light-green: #00ce7c;
+$dark-color: #231f20;
+$offgrey-color: #898a8d;
+$offdarkgrey: #75767a;
+$background-offwhite: rgba(187, 187, 187, 0.25);
+$darkgrey-color: #909090;
+$nav-bg-primary: #cdcfd0;
+$hero-dark-bg: #231f20;
+$card-bg-green: #508230;
+$card-bg-turquoise: #0d5167;
+$card-bg-navyblue: #1f2330;
+$slider-bg-gray: #eeeeef;
+$card-background-color: #ecb324;
+$light-gray-bg: #eeeeee;
+$light-gry-bg: #f5f5f5;
+$light-skyblue-bg: #3e92b6;
+$light-yellow-bg: #ecb322;
+$bg-light-red: #a01c35;
+$bg-dark-transparent: #c1b49a;
+$shadow-color: #2c3232;
+$bg-purple: #78256c;
+$bg-pink: #f8c1bb;
+//$footer-bg-grey:$text-secondary;
+//card
+//$card-hover-lightblue:$anchor;
+//Text colors
+$text-white: #fff !default;
+$text-heading-color: #222 !default;
+$text-basic: #333 !default;
+$text-yellow-dark: #e4d260 !default;
+$text-basic: #333333 !default;
+$text-secondary: #4a4a4c !default;
+$text-golden: #e4d260 !default;
+$text-breadcrumb: #999999 !default;
+$anchor-hover-golden: $text-golden;
+$text-maroon: #9f1d32;
+$light-black: #343023;
+$light-gray-txt: #666666;
+//$text-basic:#8e9091 !default;
+$text-basic-active: #878787 !default;
+$text-blue: #89c6cc !default;
+$text-blue-active: #15909c !default;
+$text-submenu-active: #222 !default;
+$text-disabled: #aaa !default;
+$text-black: #000 !default;
+$text-black-light: #333;
+$text-red: #de232f;
+$text-red-dark: #a31b1f;
+$anchor: #337ab7;
+$anchor-hover: #23527c;
+$text-black-light: #4a4a4c;
+$text-light-blue: #5886a7;
+$text-teal: #339999;
+$text-green: #006838;
+$text-carolina: #24b9ec;
+//Border colors
+$border-gray: #ddd !default;
+$border-dark: #808080;
+$border-white: #ffffff !default;
+$border-basic-color: #89c6cc !default;
+$border-basic-active: #15909c !default;
+$border-nav-submenu: #e1e1e1;
+$arrow-color: #e40c1a;
+//Styles for each component separately
+//Accordion
+$accordion-header-bg: transparent;
+$accordion-header-bg-active: transparent;
+$accordion-toggled-bg: transparent;
+$accordion-header-border: $border-gray;
+//Breadcrumb
+$breadcrumb-hover: #cf2e31;
+$breadcrumb-dropdown-bg: $bg-basic-color;
+$breadcrumb-dropdown-bg-active: $bg-blue;
+$breadcrumb-dropdown-text-active: $text-white;
+$breadcrumb-bg: transparent;
+$breadcrumb-color: $text-basic;
+$breadcrumb-color-active: $text-blue-active;
+//Buttons colors
+$btn-green-light: #a0ce4e;
+$btn-green: #92be43;
+$btn-red-active: #c34e30;
+$btn-red: #bc4526;
+//Carousel
+$carousel-bg: $bg-basic-color;
+$carousel-nav: $text-black;
+$carousel-nav-active: $text-basic-active;
+$carousel-nav-border: $border-basic-color;
+//Container component
+$container-title-row-bg: $bg-light-gray;
+//Event List
+$event-list-bg: transparent;
+$event-list-item-bg: $bg-basic-color;
+$event-list-item-color: $text-basic;
+$event-list-title-border: $border-basic-color;
+//Calendar
+$calendar-bg: $bg-basic-color;
+$calendar-header-bg: $bg-basic-color-active;
+$calendar-day-color-active: $text-white;
+$calendar-title-color: $text-white;
+//Feed
+$feed-bg: transparent;
+$feed-item-bg: transparent;
+//Field Editor
+$field-editor-bg: transparent;
+$field-editor-table-border: $bg-light-gray;
+$field-editor-text-header: $text-black;
+$field-editor-text-header-active: $text-red;
+$field-editor-text: $text-basic;
+//File List
+$file-list-bg: transparent;
+$file-list-item-bg: transparent;
+$file-list-title-color: $text-basic;
+$file-list-title-border: transparent;
+$file-list-item-color: $text-basic;
+$file-list-item-color-active: $text-basic-active;
+$file-list-item-size: $text-basic;
+$file-list-item-borer: $border-basic-color;
+$file-list-link-btn-color-active: $text-white;
+$file-list-link-btn-color: $text-basic;
+$file-list-link-btn-bg: $bg-blue-active;
+$file-list-link-btn-bg-active: $bg-blue;
+//Flip
+$flip-bg: transparent;
+$flip-slides-bg: $bg-basic-color;
+$flip-slides0-bg: #f6f6f6;
+$flip-slides1-bg: $bg-blue-active;
+$flip-slides1-color: $text-white;
+$flip-border: $border-gray;
+//Gallery
+$galleria-container-bg: transparent;
+$gallery-info-bg: $bg-basic-color;
+$gallery-info-border: $border-gray;
+$gallery-info-text: $text-basic;
+$gallery-nav-active: $text-white;
+$gallery-nav: $text-basic;
+$gallery-counter-color: $text-white;
+//Language selector
+$lang-selector-bg: $bg-basic-color;
+$lang-selector-border: $border-basic-color;
+$lang-selector-item-bg-active: $bg-basic-color;
+$lang-selector-item-border: $border-white;
+$lang-selector-item-border-active: $border-basic-active;
+//Site selector
+$site-selector-color: $text-basic;
+//Link List
+$link-list-bg: transparent;
+$link-list-header-border: $border-basic-color;
+$link-list-items-bg: transparent;
+$link-list-item-bg: transparent;
+$link-list-item-color: $text-basic;
+$link-list-item-color-active: $text-basic-active;
+$link-list-item-border-active: $border-basic-color;
+//Login
+$login-bg: transparent;
+//Logout
+$logout-bg: transparent;
+$logout-link-text-color: $text-basic;
+$logout-link-text-color-active: $text-basic-active;
+$logout-link-border: $border-basic-color;
+//Map
+$map-bg: transparent;
+$map-border: none;
+//Page List
+$page-list-bg: $bg-transparent;
+$page-list-item-bg: $bg-transparent;
+$page-list-item-title-text: $text-black;
+$page-list-item-border: $border-basic-color;
+//Pagination
+$list-pagination-bg: transparent;
+$list-pagination-active-bg: $bg-blue;
+$list-pagination-active-color: $text-white;
+$list-pagination-active-color: $text-blue;
+$list-pagination-active-bg: $bg-submenu-active;
+$list-pagination-active-border: $border-basic-active;
+//Play list
+$play-list-bg: transparent;
+$play-list-item-bg: transparent;
+$play-list-item-color: $text-basic;
+$play-list-item-color-active: $text-white;
+$play-list-nav-active: $text-blue;
+$play-list-item-bg: $bg-light-gray;
+$play-list-item-active-bg: $bg-blue;
+$play-list-border: $border-basic-color;
+$play-list-title-border: $border-basic-color;
+//Promo
+$promo-bg: $bg-basic-color;
+$promo-bg-hero: rgba(0, 0, 0, 0.5);
+$promo-border: $border-gray;
+$promo-hero-text-color: $text-white;
+$promo-shadow-border: $border-basic-color;
+//Rich Text Content
+$rich-content-bg: transparent;
+$rich-content-color: $text-basic;
+$rich-content-border: transparent;
+$rich-content-link-color: $text-red;
+$rich-content-link-color-active: $text-basic-active;
+//Search
+$search-filter: $text-basic;
+$search-filter-border: $border-basic-color;
+//Menu colors
+$menu-hover-color: #1b809e;
+$menu-active-color: #176f89;
+$border-list-color: #b7b3b3;
+//Navigation
+$nav-bg: transparent;
+$nav-arrow: #fecb2e;
+$nav-color-root: $text-basic;
+$nav-color-root-active: $text-basic;
+$nav-border-root: $border-basic-color;
+$nav-border-root-active: $border-basic-color;
+$nav-color-submenu: $text-submenu-active;
+$nav-color-submenu-active: $text-submenu-active;
+$nav-bg-root: $bg-submenu-active;
+$nav-bg-submenu: $bg-submenu-active;
+$nav-bg-submenu-active: $bg-submenu-active;
+$nav-border-submenu: $border-basic-color;
+$nav-submenu-item-border: $border-gray;
+$nav-submenu-border-active: $border-basic-color;
+//Social Media Share
+$social-media-share-bg: transparent;
+//Tabs
+$tab-heading-bg: $bg-light-gray;
+$tab-heading-active-bg: $bg-basic-color;
+$tab-heading-color: $text-heading-color;
+$tab-heading-active-color: $text-black;
+$tab-container-bg: transparent;
+$tab-container-border: $border-basic-color;
+$page-tab-list: $page-tab;
+//Title
+$title-bg: transparent;
+$title-color: $text-basic;
+$title-color-active: $text-basic-active;
+//Toggle
+$toggle-header-bg: $bg-basic-color;
+$toggle-content-bg: $bg-basic-color;
+$toggle-show-color: $text-basic-active;
+//Search Components
+$search-btn-bg: transparent;
+$search-btn-active-bg: #e0e0e0;
+$search-btn-active-border: #adadad;
+//Image component
+$image-caption-color: $text-basic;
+//Media Link Component
+$media-link-bg: transparent;
+$media-link-border: $border-basic-color;
+$media-link-color: $text-basic;
+$media-link-color-active: $text-basic-active;
+//Tag Component
+$tag-color: $text-basic;
+$tag-color-active: $text-basic-active;
+$tag-border-active: $border-basic-active;
+$tag-link-bg: $bg-blue;
+$tag-link-bg-active: $bg-blue-active;
+$tag-link-color: $text-white;
+//Link Component
+$link-bg: transparent;
+$link-text-color: $text-basic;
+$link-text-color-active: $text-basic-active;
+$link-border: $border-basic-color;
+//Overlay
+$overlay-bg: $bg-light-gray;
+//Search Components
+$search-title-border: $border-basic-color;
+$search-title-color: $text-basic;
+$search-item-color: $text-basic;
+$search-item-color-active: $text-basic;
+$search-item-border: $border-basic-color;
+$search-item-border-active: $border-basic-active;
+//
+//Search Facet Summary
+$search-facet-summary-border: transparent;
+$search-facet-summary-background: transparent;
+$search-facet-summary-item-color: $text-basic;
+$search-facet-summary-item-color-horizontal: $text-basic;
+$search-facet-summary-item-border: $border-gray;
+$search-facet-summary-item-border-horizontal: $border-basic-color;
+$search-facet-summary-item-shadow: $border-gray;
+$search-facet-summary-clear-border-horizontal: $btn-red;
+$search-facet-summary-clear-color: $text-red;
+$search-facet-summary-clear-color-horizontal: $text-blue;
+//
+$search-filter-radius-active: $text-blue;
+$search-filter-radius-border: $border-gray;
+$search-filter-radius-bg: $border-gray;
+//
+$search-filter-slider-border-active: $border-basic-color;
+$search-filter-slider-bg-active: $bg-blue;
+$search-filter-slider-btn-border: $border-gray;
+$search-filter-slider-btn-bg: $bg-light-gray;
+$search-filter-slider-btn-bg-active: $bg-light-gray-active;
+//Serach Pagination
+$search-pagination-bg: transparent;
+$search-pagination-active-bg: $bg-blue;
+$search-pagination-active-color: $text-white;
+$search-pagination-hover-color: $text-blue;
+$search-pagination-hover-bg: $bg-submenu-active;
+$search-pagination-hover-border: $border-basic-active;
+//Search selector
+$serach-selector-variant-color-active: $text-blue-active;
+//Typehead
+$tt-color: $text-basic;
+$tt-color-active: $text-blue;
+$tt-price-color: $text-blue;
+$tt-dropdown-bg: $bg-light-gray;
+$tt-suggestion-bg-active: $bg-light-gray-active;
+$tt-dropdown-border: $border-gray;
+//Video
+$video-control-bg: $bg-basic-color;
+$video-time-color: $text-basic;
+$video-time-total-bg: $bg-black;
+$video-time-handle-border: $border-gray;
+$video-time-handle-bg: $bg-black;
+//Form component
+$form-bg: transparent;
+$form-border: transparent;
+$form-color: $text-basic;
+//Main
+$page-bg: $bg-basic-color;
+$page-bg-editor: none;
+$light-gray-paragraph: #75767a;
+//header variant-1
+$search-box-bg: #f8f9fa;
+$menu-text-color: #0f273f;
+$secondary-nav-bg: #0d66b2;
+//header variant-1
+$header-light-gray: #8e9091;
+$header-bg-gray: #f8f8f8;
+$link-blue: #0083be;
+$border-gray-menu: #d3d3d3;
+//accordian
+$accordion-red: #9f1c33;
+$accordion-green: #008d5a;
+$accordion-border: #f3f0f0;
+$accordion-text-gray: #434343;
+// product-description
+$product-description-body: #595a5c;
+// realted product-article
+$flip-background: #f1ede9;
+//related product and article
+$text-black-header: #333333;
+$text-black-header-secondary: #4a4a4c;
+$border-yellow: #e4d260;
+$border-white-gray: #dddddd;
+
+// rich content tile
+$border-orange: #f5ac1e;
+$blue-line: #3498db;
+$green-line: #c2de46;
+$black-line: #566573;
+
+//box-shadow
+$box-tile-shadow: $shadow-color;
+//card-layout
+$card-layout: #28a74594;
+
+//article detail page border
+$article-border: #0066cc;
+//sales-map-color
+$state-color: #f1ae1d;
+
+// banner with content and cta
+$banner-title: #575a72;
+$banner-description: #000000;
+// banner adjustable height
+$banner-content-overlay: rgba(35, 31, 32, 0.75);
+$banner-adjust-height-title: #ffffff;
+$banner-adjust-heightdescription: #ffffff;
+
+// PRODUCT LISTIN CARD
+$product-card-bg: #dddddd;
+$product-card-title: #595a5c;
+$product-card-btn-bg: #f47523;
+$product-card-btn-color: #ffffff;
+$bg-light-blue: #013ba6;
+
+//Solution-finder
+$solution-card-title: #595a5c;
+$solution-breadcrumb-bg: #fcf0d8;
+$solution-title-bg: #f5ac1e;
+$answer-color: #f5ac1e;
+$tooltip-bg: #f47523;
+$tooltip-color: #ffffff;
+$heading-color: #ffffff;
+
+$overlay-green: rgba(80, 130, 48, 0.75);
+$overlay-blue: rgba(13, 81, 103, 0.75);
+$overlay-brown: rgba(35, 31, 32, 0.75);
+$overlay-red: rgba(162, 53, 32, 0.75);
+$overlay-darkgreen: rgba(47, 70, 39, 0.75);
+$dark-brown: #a23520;
+$dark-overlay: rgba(0, 0, 0, 0.5);
+$overlay-black: #000;
+
+// modal
+$modal-overlay: #808080;
+
+//Flip-over
+$card-bg: #1b2d61;
+$flip-rollover: #0083be;
+$bottom-corner: #0083be;
+$card-text-color: #ffffff;
+$card-title-color: #ffffff;
+$card-btn-color: #ffffff;
+$card-sub-title-color: #ffffff;
+$card-eyebro-bg: #ffffffb3;
+$card-eyebro-color: #5b869b;
+
+//BG-colors
+$bg-red: #d56879;
+$bg-lightblue: #8ec2d8;
+$bg-darkblue: #8da5c7;
+$bg-brightblue: #4694c5;
+$bg-green: #c3d9a2;
+$gray-bg: #f3f3f3;
+$indigo-blue-bg:#1c4a9a;
+$dark-blue-bg:#005eb8;

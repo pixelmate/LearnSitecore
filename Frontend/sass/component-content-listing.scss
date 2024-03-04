@@ -1,0 +1,53 @@
+@import "styles/container/*";
+@import "abstracts/mixins";
+@import "abstracts/vars";
+@import "base/fontawesome/font-awesome-mix-var";
+
+.component {
+  &.partnership-page {
+    .component-content {
+      .body-copy {
+        h2 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-size: 24px;
+          font-weight: 700;
+          color: $product-description-body;
+          margin-bottom: 0.6em;
+        }
+      }
+      .image-wrap {
+        text-align: center;
+        margin: auto;
+        img {
+          margin-bottom: 1em;
+        }
+      }
+      .copy-wrap {
+        margin-bottom: 1em;
+        p {
+          margin: 0 0 1em 0;
+        }
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          &::after {
+            @include fa-icon();
+            content: $fa-var-chevron-right;
+            display: inline-block;
+            padding-right: 0.1em;
+            vertical-align: middle;
+            margin-left: 0.3em;
+          }
+        }
+      }
+      @include respond-to(desktop) {
+        .image-wrap {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

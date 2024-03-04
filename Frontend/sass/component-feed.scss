@@ -1,0 +1,47 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+.feed {
+    background: $feed-bg;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include border-basic(bottom);
+    }
+    .feed-item {
+        @include border-basic(bottom);
+        padding: 10px 10px 10px 0px;
+        margin-left: 10px;
+        background: $feed-item-bg;
+    }
+    .feed-title {
+        a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+    }
+    .feed-datetime {
+        font-size: 1.1rem;
+        float: left;
+    }
+    .feed-author {
+        font-size: 1.1rem;
+        float: right;
+    }
+    .feed-description {
+        font-size: 1.3rem;
+        box-sizing: border-box;
+        margin: 5px;
+        overflow: hidden;
+        clear: both;
+        img {
+            margin: 0 4px;
+        }
+    }
+}
+
+@import "styles/feed/*";

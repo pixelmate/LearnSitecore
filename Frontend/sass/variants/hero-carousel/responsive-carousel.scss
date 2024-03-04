@@ -1,0 +1,75 @@
+&.responsive-carousel,
+&.variant-default {
+
+    // this will move into defaut theme
+    :not(.mulitple-bottom-links) {
+        .slick-slider {
+            .slick-dots {
+                bottom: 0;
+                top: auto;
+            }
+        }
+        .mobile-img {
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+@include respond-to(desktop) {
+    &.responsive-carousel,
+    &.variant-default {
+
+        // this will move into defaut theme
+        :not(.mulitple-bottom-links) {
+            .slide:not(.wrap) {
+                min-height: none;
+                min-height: auto;
+                height: auto;
+                padding-top: 27.8%;
+                background-position: center center;
+                background-size: cover;
+            }
+            .mobile-img {
+                display: none;
+            }
+            .container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+                .body-copy {
+                    margin: 0;
+                    transform: none;
+                    min-height: auto;
+                    width: 100%;                    
+                }
+            }
+
+        }
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+
+    // this will move into defaut theme
+    &.responsive-carousel,
+    &.variant-default {
+        :not(.mulitple-bottom-links) {
+            .slide:not(.wrap) {
+                min-height: 50rem;
+                height: auto;
+                padding-top: 0;
+            }
+
+        }
+    }
+
+}

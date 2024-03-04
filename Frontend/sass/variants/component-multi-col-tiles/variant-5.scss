@@ -1,0 +1,54 @@
+// full width two column tile
+.copy-wrap {
+    align-items: end;
+    .body-copy {
+        h2 {
+            font-size: 2.6rem;
+            color: $dark-green;
+            font-weight: 600;
+            padding-bottom: 2rem;
+            line-height: 3.2rem;
+        }
+        p {
+            font-size: 1.8rem;
+            color: $light-gray-paragraph;
+            font-weight: 600;
+        }
+    }
+    .cta-grp {
+        text-align: left;
+    }
+    .field-firstcta,
+    .field-secondcta {
+        display: block;
+        max-width: 15rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
+
+@include respond-to(desktop) {
+    .copy-wrap {
+        .body-copy {
+            h2 {
+                font-size: 3.2rem;
+            }
+            p {
+                font-size: 2.2rem;
+            }
+        }
+        .cta-grp {
+            text-align: right;
+            padding-bottom: 2rem;
+        }
+        .field-firstcta,
+        .field-secondcta {
+            display: inline-block;
+            min-width: 13rem;
+            margin: 1rem;
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

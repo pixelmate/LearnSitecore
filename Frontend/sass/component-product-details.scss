@@ -1,0 +1,28 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+
+@import "variants/component-product-details/product-article.scss";
+@import "variants/component-product-details/product-variant.scss";
+@import "variants/component-product-details/product-image.scss";
+
+// product related article and product
+.component {
+    &.product-details {
+        //product description
+        &.variant-4 {
+            @import "variants/component-product-details/variant-4.scss";
+        }
+        //related product and article
+        &.variant-3 {
+            @import "variants/component-product-details/variant-3.scss";
+        }
+        //related article
+        &.variant-2 {
+            @import "variants/component-product-details/variant-2.scss";
+        }
+        //related products
+        &.variant-1 {
+            @import "variants/component-product-details/variant-1.scss";
+        }
+    }
+}

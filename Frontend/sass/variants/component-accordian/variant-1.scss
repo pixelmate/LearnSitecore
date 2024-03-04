@@ -1,0 +1,27 @@
+// bordered
+&.variant-1 {
+    .item {
+        border-bottom: 1px solid $accordion-border;
+        &:last-child {
+            border-bottom: none;
+        }       
+    }
+    .toggle-header {
+        .component {
+            .field-heading {
+                &:before {
+                    @include fa-icon();
+                    display: block;
+                    right:auto;
+                    content: $fa-var-angle-right;
+                    opacity: .8;
+                    position: absolute;                   
+                    left: 1.5rem;                    
+                }
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.XA.Foundation.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.XA.Foundation.Mvc.Abstraction.IRenderingContext">
+            <summary>
+            Abstraction over Sitecore.Mvc.Presentation.RenderingContext
+            </summary>
+        </member>
+        <member name="T:Sitecore.XA.Foundation.Mvc.Pipelines.GetChromeData.DisableHiddenPlaceholders">
+            <summary>
+            Procesor used to disable editing of placeholders being added to Layout item as hidden placeholders
+            </summary>
+        </member>
+        <member name="T:Sitecore.XA.Foundation.Mvc.Services.VirtualPathProvider">
+            <summary>
+            Wrapper for Asp.Net MVC VirtualPathProvider
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.Parameters">
+            <summary>
+            Rendering parameters 
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.Name">
+            <summary>
+            Name of the rendering
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.SnippetId">
+            <summary>
+            If this rendering comes from snippet then here will be snippet Id
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.UniqueId">
+            <summary>
+            Returns unique ID of the rendering given by Sitecore upon adding the rendering to the page
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.UniqueIdString">
+            <summary>
+            Returns string representation of unique ID of the rendering given by Sitecore upon adding the rendering to the page or empty string
+            </summary>
+        </member>
+        <member name="P:Sitecore.XA.Foundation.Mvc.Wrappers.Rendering.IsFromSnippet">
+            <summary>
+            True if component comes from snippet
+            </summary>
+        </member>
+    </members>
+</doc>

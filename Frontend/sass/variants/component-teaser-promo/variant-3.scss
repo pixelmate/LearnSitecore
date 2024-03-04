@@ -1,0 +1,74 @@
+//teaser promo variant 3 Banner with RTE and CTA
+.col-left {
+    padding-bottom: 3rem;
+    .inner-wrap {
+        width: calc(100% - 60%);
+        margin: auto;
+        margin-right: 0;
+        border-bottom: 3px solid;
+        padding-right: 1.5rem;
+        h2 {
+            font-size: 3.5rem;
+            p {
+                font-size: inherit;
+            }
+        }
+    }
+}
+
+.bottom-link {
+    flex-wrap: wrap;
+}
+
+.sxa-btn {
+    width: auto;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    a {
+        min-width: 190px;
+    }
+}
+
+.col-right {
+    .field-description {
+        font-size: 1.9rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    .inner-wrap {
+        padding: 0 1.5rem;
+    }
+}
+
+@include respond-to(tab) {
+    .col-left {
+        .inner-wrap {
+            text-align: left;
+        }
+    }
+}
+
+@include respond-to(desktop) {
+    .col-left {
+        .inner-wrap {
+            border-bottom: 0;
+            border-right: 3px solid;
+            min-height: 180px;
+            h2 {
+                margin-right: 100px;
+                font-size: 3vw;
+            }
+        }
+    }
+}
+
+@include respond-to(large-desktop) {
+    .col-right {
+        .inner-wrap {
+            padding-left: 80px;
+        }
+        .field-description {
+            font-size: 1.5vw;
+        }
+    }
+}

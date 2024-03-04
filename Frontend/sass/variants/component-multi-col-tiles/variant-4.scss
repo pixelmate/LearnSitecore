@@ -1,0 +1,62 @@
+// full width banner with general information
+.row {
+    .col-right {
+        >.scLooseFrameZone {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+.inner-wrap {
+    .col-left {
+        >h2 {
+            color: $light-green;
+            font-weight: 600;
+            font-size: 3.2rem;
+            strong {
+                font-weight: 800;
+            }
+        }
+    }
+    .col-right {
+        >div {
+            border-bottom: 1px solid $light-green;
+            &:last-child {
+                border: none;
+            }
+        }
+        .body-copy {
+            .copy-wrap {
+                p {
+                    display: inline-block;
+                    @include respond-to(below-tab) {
+                        width: 48%;
+                        &:first-child {
+                            width: 100%;
+                        }
+                    }
+                    @include respond-to(desktop) {
+                        width: initial;
+                        img {
+                            max-width: 14rem;
+                        }
+                    }
+                }
+                padding: 2rem 2rem 2rem 0.5rem;
+                *:not(strong) {
+                    padding-right: .6rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: $white;
+                }
+                strong {
+                    color: inherit;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}

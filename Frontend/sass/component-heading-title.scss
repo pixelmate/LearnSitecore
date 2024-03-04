@@ -1,0 +1,41 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+
+.component {
+  &.content {
+    .heading-title {
+      margin: 4rem auto;
+    }
+  }
+}
+
+// section title
+
+.section-title {
+  font-size: 3rem;
+  padding-bottom: 30px;
+
+  h1,
+  h2,
+  h3 {
+    font-size: 3rem;
+  }
+
+  &.title {
+
+    .field-title a,
+    a {
+      border-bottom-width: 0;
+    }
+  }
+
+  &.title-align-center {
+    text-align: center;
+  }
+}
+
+
+
+// component title

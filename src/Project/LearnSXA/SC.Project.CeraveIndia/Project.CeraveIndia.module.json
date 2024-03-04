@@ -1,0 +1,20 @@
+{
+  "namespace": "Project.CeraveIndia",
+  "references": [ "*Feature.*" ],
+  "items": {
+    "includes": [
+      {
+        "name": "Content-SitecoreLearn",
+        "path": "/sitecore/content/Loreal/Brand Sites/Cerave/Asia Pacific/IN",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "MediaLibrary-Themes",
+        "path": "/sitecore/media library/Themes/Loreal/Brand Sites/Cerave/IN/IN",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete"
+      }
+    ]
+  }
+}

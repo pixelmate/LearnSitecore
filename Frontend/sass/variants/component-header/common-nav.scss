@@ -1,0 +1,308 @@
+// Utility Navigation start
+.utility-navigation {
+    display: none;
+
+    .top-nav {
+        .list-wrap {
+            display: flex;
+            justify-content: space-between;
+
+            .list-item {
+                z-index: 2;
+
+                a {
+                    padding-right: 1.6rem;
+                    font-weight: 700;
+                    font-style: normal;
+                    color: $link-blue;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                &:hover,
+                &:active {
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Utility Navigation end
+
+//search box button start
+.component {
+    &.search-box {
+        position: relative;
+
+        .search-holder {
+            .search-input-wrapper {
+                input {
+                    display: none;
+
+                    @include respond-to(desktop) {
+                        display: block;
+                    }
+                }
+
+                .custom-search-box-button,
+                .search-box-button {
+                    background-color: transparent;
+                    // position: absolute;
+                    // top: 50%;
+                    // right: 2rem;
+                    // transform: translateY(-50%);
+                    // background: transparent;
+                    // color: transparent;
+                    // border: transparent;
+                }
+            }
+        }
+
+        &.active {
+            .search-holder {
+                .search-input-wrapper {
+                    input {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//search box button end
+
+//hamburgerv start
+
+.component {
+    &.plain-html {
+        .hamburger {
+            position: absolute;
+            right: 5%;
+            margin: 2rem 1.5rem;
+            background-color: transparent;
+            border: none;
+
+            .icon-bar {
+                margin-top: 6px;
+                background-color: $link-blue;
+                width: 43px;
+                height: 5px;
+                border-radius: 2px;
+                transition: transform 250ms ease-in, opacity 150ms ease-in;
+                display: block;
+
+            }
+
+        }
+
+        @include respond-to(desktop) {
+            display: none;
+        }
+    }
+}
+
+&.active {
+    .component {
+        &.plain-html {
+            .hamburger {
+                .icon-bar {
+                    &:first-child {
+                        transform: rotateZ(45deg) translate(8px, 9px);
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotateZ(-45deg);
+                    }
+
+                    &:last-child {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Header Global Menu start
+.component.header-global-menu,
+.component.page-list {
+    display: none;
+
+    @include respond-to (desktop) {
+        display: block;
+    }
+
+    background-color: $link-blue;
+    padding: 1rem 2rem;
+
+    .items {
+        justify-content: space-around;
+
+        .item {
+            color: $header-light-gray;
+            border-bottom: 1px solid #d3d3d3;
+
+            .submenu-utility-linklist {
+                display: none;
+            }
+
+            .has-sublist,
+            &.has-submenu-list {
+                position: relative;
+
+                &:before {
+                    @include fa-icon();
+                    content: "\f107";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: $nav-arrow;
+                    transition: all ease-in-out 150ms;
+                    transform: translateY(-50%) rotate(0deg);
+                }
+            }
+
+            &.open {
+
+                .has-sublist,
+                &.has-submenu-list {
+                    position: relative;
+
+                    &::before {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+
+            &.has-sublist a,
+            >a {
+                position: relative;
+                color: inherit;
+                font-size: 1.42rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 1rem 0;
+            }
+
+            ul.sub-menu-list {
+                display: none;
+                z-index: 3;
+                list-style: none;
+                position: relative;
+                padding: 15px 25px 0px 25px;
+                box-shadow: none;
+                transition: all 0.2s ease-in-out;
+
+                li.sub-menu-item {
+                    a {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@include respond-to(desktop) {
+    .utility-navigation {
+        display: block;
+    }
+
+    .component {
+        &.plain-html {
+            display: none;
+        }
+    }
+
+    .component {
+
+        &.header-global-menu,
+        &.page-list {
+
+            .items {
+                display: flex;
+
+                .item {
+                    border: none;
+
+                    &.open {
+                        .submenu-utility-linklist {
+                            display: block;
+                            position: absolute;
+                            top: 100%;
+                        }
+                    }
+
+                    .has-sublist,
+                    &.has-submenu-list {
+
+                        &:before {
+                            right: -15px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+//**************// Header Global Menu Functionality//******************//
+&.active {
+
+    .component.header-global-menu,
+    .component.page-list {
+        display: block;
+
+        .component {
+            &.search-box {
+                .search-holder {
+                    .search-input-wrapper {
+                        input {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul.items {
+            li.item {
+                &.open {
+
+                    .sub-menu-list,
+                    .submenu-utility-linklist {
+                        display: block;
+                    }
+
+                    .has-sublist {
+                        .link-list {
+                            display: none;
+                        }
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-wrapper {
+        display: block;
+    }
+}

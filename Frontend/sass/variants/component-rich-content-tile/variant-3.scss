@@ -1,0 +1,75 @@
+.component-content {
+  .text-multibg-overlay {
+    .tile-wrap {
+      position: relative;
+      display: grid;
+    }
+    .text-wrap {
+      order: 2;
+      h2 {
+        color: $accordion-red;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1.2em;
+        color: $bg-black;
+        text-align: center;
+      }
+    }
+    .image-wrap {
+      margin: 30px;
+      img {
+        border-top: 15px solid $accordion-red;
+      }
+    }
+    @include respond-to(desktop) {
+      .tile-wrap {
+        position: relative;
+        margin: auto;
+        max-width: 87%;
+        @include randomcolors(text-wrap);
+        &:nth-child(2n) {
+          .text-wrap {
+            left: 4%;
+            top: 18%;
+          }
+        }
+
+        .text-wrap {
+          position: absolute;
+          max-width: 350px;
+          width: 50%;
+          right: 12%;
+          left: auto;
+          padding: 0px 20px;
+          top: 22%;
+          -webkit-box-shadow: inset 2px -1px 22px -5px $box-tile-shadow;
+          -moz-box-shadow: inset 2px -1px 22px -5px $box-tile-shadow;
+          box-shadow: inset 2px -1px 22px -5px $box-tile-shadow;
+          h2 {
+            color: $white;
+            text-align: left;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-top: 22px;
+            margin-bottom: 11px;
+          }
+          p {
+            color: $white;
+            text-align: left;
+            a {
+              color: $accordion-red;
+            }
+          }
+        }
+        .image-wrap {
+          img {
+            border: none;
+            width: 950px;
+          }
+        }
+      }
+    }
+  }
+}

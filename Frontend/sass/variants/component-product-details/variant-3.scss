@@ -1,0 +1,94 @@
+// related article and product
+.copy-wrap {
+    padding: 3rem 0;
+    h2,
+    h3>a {
+        color: $text-black-header;
+        font-weight: 900;
+        font-size: 3rem;
+        text-transform: uppercase;        
+    }
+    .inner-wrap {
+        display: flex;
+        flex-direction: row-reverse;
+        border-bottom: 1px solid $border-yellow;
+        border-top: 1px solid $border-yellow;
+        padding: 2rem 1.5rem;
+        .image-holder {
+            flex: 0 0 40%;
+            max-width: 100%;
+            text-align: center;
+            width: auto;
+            max-height: 10rem;
+            height: 100%;
+            border: 1px solid $border-white-gray;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+        .body-copy {
+            text-align: center;
+            padding-right: 1rem;
+            flex: 0 0 60%;
+            max-width: 100%;
+            h3 {
+                line-height: 1.1;
+                >a {
+                    color: $text-black-header-secondary;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    padding-bottom: 0;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond-to(tab) {
+    .copy-wrap {
+        padding: 3rem 0;
+        h2,
+        h3>a {
+            color: $text-black-header;
+            font-weight: 900;
+            font-size: 3rem;
+            text-transform: uppercase;            
+        }
+        .inner-wrap {
+            display: block;
+            border-bottom: none;
+            border-top: none;
+            .image-holder {
+                text-align: center;
+                height: 28.4rem;
+                max-height: initial;
+                width: auto;
+                border: 1px solid #dddddd;
+                margin-bottom: 2rem;
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            .body-copy {
+                text-align: left;
+                h3 {
+                    line-height: 1.1;
+                    >a {
+                        color: $text-black-header-secondary;
+                        font-size: 2rem;
+                        text-decoration: none;
+                        padding-bottom: 0;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,378 @@
+/* Foodplot */
+@import "base/fontawesome/font-awesome-mix-var.scss";
+.foodplot {
+	.MyMaps {
+		color: #fff;
+	}
+	.btn-group{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.btn-group-justified{
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: separate;
+		float: left;
+		margin-left: 5px;
+	}
+	.btn{
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: none;
+		color: #333;
+		background-color: #fff;
+		border-color: #ccc;
+		text-decoration: none;
+		&.btn-default{
+			display: table-cell;
+			float: none;
+			width: 1%;
+		}
+	}
+	.MyMap {
+		display: inline-block;
+		background-color: #939498;
+		padding: 10px;
+		position: relative;
+		min-width: 80px;
+		height: 80px;
+		text-align: center;
+		font-weight: bold;
+		margin-right: 30px;
+	}
+	.MyMapActive {
+		display: inline-block;
+		background-color: #939498;
+		padding: 10px;
+		position: relative;
+		text-align: center;
+		font-weight: bold;
+		margin-right: 30px;
+		border: 3px solid #e0bc45;
+		height: 86px;
+		min-width: 86px;
+	}
+	.cursor-pointer {
+		cursor: pointer;
+	}
+	.MyLocationLogo30 {
+		cursor: pointer;
+		background: url('../images/icons/geolocation.png') center center no-repeat;
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		background-size: 30px 30px;
+		margin-left: 10px;
+	}
+	.MyLocationLogo15 {
+		cursor: pointer;
+		background: url('../images/icons/geolocation.png') center center no-repeat;
+		display: inline-block;
+		height: 15px;
+		width: 15px;
+		background-size: 15px 15px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.MyMapCancel {
+		position: absolute;
+		top: -14px;
+		right: -14px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		background: #000;
+		font-weight: bold;
+		display: inline-block;
+		line-height: 0px;
+		padding: 15px 10px 18px 10px;
+		cursor: pointer;
+		font-size: 22px;
+		&:before {
+			content: "x";
+		}
+	}
+	.roundPlusIcon {
+		margin-left: -22px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		background: #000;
+		color: #FFF;
+		font-weight: bold;
+		display: inline-block;
+		line-height: 0;
+		padding: 16px 8px 16px 8px;
+		cursor: pointer;
+		font-size: 30px;
+		margin-top: 0px;
+		&::before {
+			content: '+';
+		}
+	}
+	.foodplotMapName {
+		display: inline-block;
+		height: 36px;
+	}
+	.MyMapLogo {
+		background: url('../images/icons/icon_foodplot_map.jpg') center center no-repeat;
+		height: 40px;
+		width: auto;
+	}
+	.foodplotRoundButton {
+		-moz-border-radius: 17px;
+		-webkit-border-radius: 17px;
+		border-radius: 17px;
+		display: inline-block;
+		padding: 6px 16px;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	.foodplotInput {
+		text-decoration: none;
+		padding: 5px 8px;
+		width: 200px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		margin-right: 0px;
+		height: 30px;
+		&:focus {
+			outline: none;
+		}
+	}
+	.lightGrayBackground {
+		background-color: #efefef;
+	}
+	.yellowBorder {
+		border: 1px solid #e1ca87;
+	}
+	.whiteText {
+		color: #FFF;
+	}
+	.blackText {
+		color: #000;
+	}
+	.blackBackground {
+		background-color: #000;
+	}
+	.yellowBackground {
+		background-color: #e0bc45;
+	}
+	.lightGrayBorder {
+		border: 1px solid #ccc;
+	}
+	.acerageText {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.subtitleText {
+		font-size: 18px;
+		font-weight: bold;
+		padding: 10px 0px;
+	}
+	.normalWeight {
+		font-weight: normal !important;
+	}
+	.myMapText {
+		font-weight: bold;
+		color: #757575;
+	}
+	.topSpacer20 {
+		padding-top: 20px;
+	}
+	.speciesCheckList {
+		font-weight: bold;
+	}
+	.NoPadding {
+		padding: 0px !important;
+	}
+	.clear {
+		clear: both;
+	}
+	.topSpacer5 {
+		padding-top: 5px;
+	}
+	.paddingLeft0 {
+		padding-left: 0px !important;
+	}
+	.foodplotSelect {
+		border: 1px solid #000;
+		padding: 6px 20px !important;
+		font-size: 14px;
+		color: #000;
+	}
+	.hiddenFileUpload {
+		opacity: 0;
+		width: 0px;
+		height: 0px;
+	}
+	.moveableClickToBegin {
+		position: fixed;
+		border: 2px solid black;
+		border-radius: 5px;
+		background: #CCC;
+		padding: 5px;
+		color: black;
+	}
+	.moveableDoubleClickToEnd {
+		position: fixed;
+		border: 2px solid black;
+		border-radius: 5px;
+		background: #CCC;
+		padding: 5px;
+		color: black;
+	}
+	.foodplotinstructionTitle {
+		font-size: 28px;
+		font-weight: bold;
+		color: #000;
+	}
+	.foodplotinstructionContent {
+		color: #000;
+	}
+	.foodplotHowTo {
+		border: 3px solid #e1ca87;
+		padding: 10px;
+	}
+	.foodplotHowToTitle {
+		font-size: 20px;
+		font-weight: bold;
+		color: #000;
+		text-decoration: underline;
+	}
+	.foodplotHowToContent {
+		font-size: 16px;
+		font-weight: bold;
+		color: #000;
+	}
+	.panel {
+		border: 0px;
+		padding: 0px 0px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.score-accordion-panel {
+		border: 0px;
+		padding: 0px 0px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.score-panel {
+		border: 0px;
+		padding: 0px 0px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.panel-heading {
+		font-weight: bold;
+		background-color: #fff;
+		padding: 5px 10px 5px 10px;
+		a {
+			&:before {
+				font-family: 'Glyphicons Halflings', sans-serif;
+				@include fa-icon();
+				float: right;
+				content: $fa-var-chevron-down;
+				
+				font-weight: normal;
+			}
+		}
+	}
+	.panel-group {
+		border: 3px solid #e1ca87;
+		padding: 10px 0px;
+	}
+	.score-accordion {
+		border: 3px solid #e1ca87;
+		padding: 10px 0px;
+	}
+	.panel-body {
+		border-top: 0px !important;
+		padding: 5px;
+	}
+	.panel-heading.active {
+		a {
+			&:before {
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.fontSize13 {
+		font-size: 13px;
+	}
+	.btn-default {
+		&:hover {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+		&:focus {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+		&:active {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+	}
+	.btn-default.active {
+		font-weight: bold;
+		border: 2px solid #E0BC45;
+		background-color: #939498;
+		color: #FFF;
+	}
+	.score-alert {
+		&:hover {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+		&:focus {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+		&:active {
+			font-weight: bold;
+			border: 2px solid #E0BC45;
+			background-color: #939498;
+			color: #FFF;
+		}
+	}
+	.score-alert.active {
+		font-weight: bold;
+		border: 2px solid #E0BC45;
+		background-color: #939498;
+		color: #FFF;
+	}
+}

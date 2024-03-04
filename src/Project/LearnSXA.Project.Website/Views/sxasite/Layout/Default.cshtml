@@ -1,0 +1,17 @@
+﻿@using Microsoft.Extensions.DependencyInjection
+@using Sitecore.DependencyInjection
+@using Sitecore.Diagnostics
+@using Sitecore.Links
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.ExperienceForms.Mvc.Html
+
+<main id="main-container" key="main_container_key" v-nojshandler>
+    <div class="container container--bleed">
+        @Html.Sitecore().Placeholder("header")
+    </div>
+    <div id="content-container">
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    @Html.Sitecore().Placeholder("footer")
+</main>

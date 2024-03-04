@@ -1,0 +1,33 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+
+.component {
+    &.hero {
+        padding: 0;
+        @import "variants/component-hero-banner/with-text.scss";
+
+        @import "variants/component-hero-banner/with-card.scss";
+
+        @import "variants/component-hero-banner/with-carousel.scss";
+
+        @import "variants/component-hero-banner/with-title-top.scss";
+        @import "variants/component-hero-banner/with-content-cta.scss";
+        @import "variants/component-hero-banner/with-adjustable-height.scss";
+
+        .sxa-btn {
+            margin: 25px 0;
+        }
+
+        &.gray-bg {
+            background-color: $border-gray-menu;
+        }
+
+        .scEmptyImage {
+            max-width: 15rem;
+        }
+    }
+
+
+}

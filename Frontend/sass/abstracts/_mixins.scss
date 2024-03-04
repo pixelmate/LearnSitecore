@@ -1,0 +1,214 @@
+@import "vars";
+
+/* breakpoints */
+
+$break-mobile: 767px;
+$break-small-device: 480px;
+$break-tab: 768px;
+$break-desktop: 992px;
+$break-desktop-header:1024px;
+$break-mobile-horizontal: 640px;
+$large-desktop: 1200px;
+$extra-largedesktop: 1300px;
+@mixin respond-to($media) {
+  @if $media==mobile {
+    @media only screen and (max-width: $break-mobile) {
+      @content;
+    }
+  }
+  @if $media==desktop-header {
+    @media only screen and (min-width: $break-desktop-header) {
+      @content;
+    }
+  }
+  @if $media==small-device {
+    @media only screen and (max-width: $break-small-device) {
+      @content;
+    }
+  }
+  @if $media==tab {
+    @media only screen and (min-width: $break-tab) {
+      @content;
+    }
+  } @else if $media==desktop {
+    @media only screen and (min-width: $break-desktop) {
+      @content;
+    }
+  } @else if $media==large-desktop {
+    @media only screen and (min-width: $large-desktop) {
+      @content;
+    }
+  } @else if $media==extra-largedesktop {
+    @media only screen and (min-width: $extra-largedesktop) {
+      @content;
+    }
+  } @else if $media==below-tab {
+    @media only screen and (max-width: 991px) {
+      @content;
+    }
+  } @else if $media==mob-horizontal {
+    @media only screen and (min-width: $break-mobile-horizontal) {
+      @content;
+    }
+  }
+}
+
+@mixin wrapper() {
+  max-width: 960px;
+  margin: 0 auto !important;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + rem;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin border-basic(
+  $position: all,
+  $border-color: $border-gray,
+  $border-width: 1px
+) {
+  @if ($position!=all) {
+    border-#{$position}-width: $border-width;
+    border-#{$position}-style: solid;
+    border-#{$position}-color: $border-color;
+  } @else {
+    border-width: $border-width;
+    border-style: solid;
+    border-color: $border-color;
+  }
+}
+
+@mixin fixed-bg($pos, $min-height: 240px) {
+  background-position: $pos;
+  background-attachment: fixed;
+  min-height: $min-height;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) ==false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -khtml-transform: $transform;
+  -moz-transform: $transform;
+  transform: $transform;
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin direction($value) {
+  -webkit-flex-direction: $value;
+  -khtml-flex-direction: $value;
+  -moz-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin proxima-font($weight: semibold) {
+  @if ($weight==semibold) {
+    font-family: "ProximaNova-Semibold", arial, helvetica, sans-serif;
+  } @else if($weight==light) {
+    font-family: "ProximaNova-Light", arial, helvetica, sans-serif;
+  }
+}
+
+@mixin opensans-font-stack() {
+  font-family: "Open Sans", Helvetica, Verdana, Tahoma, sans-serif;
+}
+
+@mixin loading-gif() {
+  background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJibGFjayI+DQogIDxwYXRoICBvcGFjaXR5PSIuMjUiIGQ9Ik0xNiAwIEExNiAxNiAwIDAgMCAxNiAzMiBBMTYgMTYgMCAwIDAgMTYgMCBNMTYgNCBBMTIgMTIgMCAwIDEgMTYgMjggQTEyIDEyIDAgMCAxIDE2IDQiLz4NCiAgPHBhdGggZmlsbD0nIzFhODBiNicgZD0iTTE2IDAgQTE2IDE2IDAgMCAxIDMyIDE2IEwyOCAxNiBBMTIgMTIgMCAwIDAgMTYgNHoiPg0KICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDE2IDE2IiB0bz0iMzYwIDE2IDE2IiBkdXI9IjAuOHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPg0KICA8L3BhdGg+DQo8L3N2Zz4NCg==);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// z-index for accordian
+@mixin index {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+        z-index: 10 - $i;
+        bottom: (10*($i - 1))+px;
+    }
+}
+}
+
+//mixin for random colour
+@mixin randomcolors ($class) {
+  &:nth-child(even){
+    .#{$class}{
+      background-color: $light-skyblue-bg;
+    }
+  }
+  &:nth-child(odd){
+    .#{$class}{
+      background-color: $light-yellow-bg;
+    }
+  }
+}
+
+// Rich Content Tile
+
+@mixin align-content-left-v1 {
+  left: 0;
+  right: auto;
+  border-right: none;
+  border-left: 10px solid orange;
+  margin-left: -20px;
+}
+
+@mixin align-content-right-v1 {
+  right: 0;
+  left: auto;
+  border-left: none;
+  border-right: 10px solid orange;
+  margin-right: -30px;
+}
+
+@mixin align-content-left-v2 {
+  text-align: left;
+  position: absolute;
+  width: 600px;
+  left: 5%;
+  top: -50px;
+
+  h2::after {
+    left: 0;
+    right: auto;
+    margin: 2rem auto;
+  }
+}
+
+@mixin align-content-right-v2 {
+  text-align: right;
+  right: 5%;
+  left: auto;
+  width: 600px;
+  top: -50px;
+  h2::after {
+    right: 0;
+    left: auto;
+  }
+}

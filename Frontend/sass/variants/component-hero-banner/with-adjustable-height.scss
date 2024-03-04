@@ -1,0 +1,158 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+&.banner-adjustable-height {
+
+    .banner-image {
+        // display: none;
+        line-height: 0;
+        img{
+            width: 100%;
+        }
+
+        @include respond-to(tab) {
+            display: block;
+
+        }
+    }
+
+    .banner-mobile-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    @include respond-to(tab) {
+        .inner-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+
+    .banner-content-wrapper {
+        //background-color: $banner-content-overlay;
+        width: auto;
+        padding: 65px 15px;
+        z-index: 10;
+
+        &::before {
+            content: "";
+            background-color: $bg-gray;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include respond-to(tab) {
+            max-width: 500px;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &.right-align {
+                transform: translate(0, -50%);
+                bottom: auto;
+                right: 20px;
+                left: auto;
+            }
+
+            &.left-align {
+                transform: translate(0, -50%);
+                bottom: auto;
+                right: auto;
+                left: 20px;
+            }
+
+            &.left-bottom {
+                right: auto;
+                left: 0;
+                transform: none;
+                bottom: 0;
+                top: auto;
+            }
+
+            &.right-bottom {
+                right: 0;
+                left: auto;
+                transform: none;
+                bottom: 0;
+                top: auto;
+            }
+
+            &.left-top {
+                right: auto;
+                left: 0;
+                transform: none;
+                bottom: auto;
+                top: 0;
+            }
+
+            &.right-top {
+                right: 0;
+                left: auto;
+                transform: none;
+                bottom: auto;
+                top: 0;
+            }
+
+            &.center-top {
+                right: auto;
+                left: 50%;
+                bottom: auto;
+                top: 0;
+                margin: 0 auto;
+                transform: translate(-50%, 0);
+            }
+
+            &.center-bottom {
+                right: auto;
+                left: 50%;
+                bottom: 0;
+                top: auto;
+                margin: 0 auto;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &.black-overlay {
+            background-color: $overlay-black;
+        }
+
+        &.brown-overlay {
+            background-color: $bg-light-gray;
+        }
+
+        &.dark-brown-overlay {
+            background-color: $dark-brown;
+        }
+
+        &.dark-overlay {
+            background-color: $dark-overlay;
+        }
+
+        &.green-overlay {
+            background-color: $overlay-green;
+        }
+
+        &.turquoise-overlay {
+            background-color: $overlay-blue;
+        }
+    }
+
+    .hero-banner-title {
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1.2;
+        color: $banner-adjust-height-title;
+    }
+
+    .hero-banner-description {
+        color: $banner-adjust-heightdescription;
+        font-size: 1.4rem;
+    }
+}

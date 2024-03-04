@@ -1,0 +1,2 @@
+C:\Project\LearnSitecore\src\Project\LearnSXA\SC.Project.CeraveIndia\obj\Debug\SC.Project.CeraveIndia.csproj.AssemblyReference.cache
+C:\Project\LearnSitecore\src\Project\LearnSXA\SC.Project.CeraveIndia\obj\Debug\SC.Project.CeraveIndia.csproj.CoreCompileInputs.cache

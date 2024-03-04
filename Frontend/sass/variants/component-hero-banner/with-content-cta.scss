@@ -1,0 +1,261 @@
+&.banner-with-content {
+
+    .inner-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-image {
+
+        @include respond-to(tab) {
+            padding-top: 36%;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @include respond-to(mobile) {
+            background-image: none ;
+        }
+
+    }
+
+    .banner-mobile-image {
+        img {
+            display: block;
+        }
+
+    }
+
+
+
+    .banner-content-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        padding: 0 15px;
+
+        @include respond-to(tab) {
+            height: auto;
+            width: 90%;
+            max-width: 550px;
+        }
+
+        @include respond-to(desktop) {
+            right: 10rem;
+        }
+
+        .content-top {
+            @include respond-to(mobile) {
+                padding: 10px 15px;
+            }
+        }
+        
+        &.black-overlay {
+            .content-top {
+                background-color: $overlay-black;
+            }   
+        }
+        &.brown-overlay {
+            .content-top {
+                background-color: $bg-light-gray;
+            }   
+        }
+        &.dark-brown-overlay {
+            .content-top {
+                background-color: $dark-brown;
+            }   
+        }
+        &.dark-overlay {
+            .content-top {
+                background-color: $dark-overlay;
+            }   
+        }
+        &.green-overlay {
+            .content-top {
+                background-color: $overlay-green;
+            }   
+        }
+        &.turquoise-overlay {
+            .content-top {
+                background-color: $overlay-blue;
+            }   
+        }
+
+        .content-bottom {
+            @include respond-to(mobile) {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .banner-conetent-image {
+                max-width: 150px;
+                margin: 0 auto;
+                padding: 15px;
+
+                @include respond-to(tab) {
+                    max-width: 130px;
+                    padding: 0;
+
+                }
+
+                @include respond-to(desktop) {
+                    max-width: 200px;
+                    padding: 15px;
+
+                }
+
+                img {
+
+                    margin: 15px;
+
+                    @include respond-to(tab) {
+                        margin: 10px;
+                    }
+
+                    @include respond-to(mobile) {
+
+                        margin: 15px;
+                    }
+                }
+            }
+        }
+
+        &.right-align {
+            transform: translate(0, -50%);
+            top: 50%;
+            bottom: auto;
+            right: 20px;
+            left: auto;
+            @extend %align-mobile;
+
+        }
+
+        &.left-align {
+            transform: translate(0, -50%);
+            top: 50%;
+            bottom: auto;
+            right: auto;
+            left: 20px;
+            @extend %align-mobile;
+        }
+
+        &.left-bottom {
+            right: auto;
+            left: 0;
+            transform: none;
+            bottom: 0;
+            top: auto;
+            @extend %align-mobile;
+        }
+
+        &.right-bottom {
+            right: 0;
+            left: auto;
+            transform: none;
+            bottom: 0;
+            top: auto;
+            @extend %align-mobile;
+        }
+
+        &.left-top {
+            right: auto;
+            left: 0;
+            transform: none;
+            bottom: auto;
+            top: 0;
+            @extend %align-mobile;
+
+        }
+
+        &.right-top {
+            right: 0;
+            left: auto;
+            transform: none;
+            bottom: auto;
+            top: 0;
+            @extend %align-mobile;
+        }
+
+        &.center-top {
+            right: auto;
+            left: 50%;
+            bottom: auto;
+            top: 0;
+            margin: 0 auto;
+            transform: translate(-50%, 0);
+            @extend %align-mobile;
+        }
+
+        &.center-bottom {
+            right: auto;
+            left: 50%;
+            bottom: 0;
+            top: auto;
+            margin: 0 auto;
+            transform: translate(-50%, 0);
+            @extend %align-mobile;
+        }
+    }
+
+    %align-mobile {
+        @include respond-to(mobile) {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translate(0, -50%);
+        }
+    }
+
+    .hero-banner-title {
+        color: $banner-title;
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        @include respond-to(tab) {
+            font-size: 3rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        @include respond-to(desktop) {
+            font-size: 4.8rem;
+        }
+    }
+
+    .hero-banner-description {
+        color: $banner-description;
+    }
+
+    .banner-cta-holder {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+
+        @include respond-to(desktop) {
+            padding-top: 30px;
+        }
+
+        .sxa-btn {
+            margin: 10px;
+        }
+    }
+
+}

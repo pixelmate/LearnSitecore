@@ -1,0 +1,144 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+@import "base/fontawesome/font-awesome-mix-var.scss";
+
+.on-page-editor {
+    .accordion .toggle-content [scfieldtype="rich text"] {
+        display: block;
+    }
+}
+
+.component {
+    &.accordion {
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        .component {
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        .toggle-header {
+            cursor: pointer;
+            background-color: $accordion-header-bg;
+
+            &:hover {
+                background-color: $accordion-header-bg-active;
+            }
+
+            .component {
+                margin-top: 0;
+                margin-bottom: 0;
+
+                &.title {
+                    margin-top: 0;
+                }
+
+                .field-heading {
+                    position: relative;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    padding: 0.3rem 3rem;
+
+                    &:before,
+                    &::after {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: initial;
+                        right: 26px;
+                        background: $white;
+                        width: 3px;
+                        height: 20px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(0deg);
+                        transition: transform 0.5s ease-in-out;
+                    }
+
+                    &:after {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+
+            .label {
+                @include clearfix;
+                padding: 7px 0;
+                text-align: left;
+                display: block;
+                background: transparent;
+                position: relative;
+                z-index: 3;
+            }
+        }
+
+        .active {
+            .toggle-header {
+                .field-heading::before {
+                    transform: translateY(-50%) rotate(90deg);                    
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+
+        .toggle-content {
+            .field-content {
+                padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+            }
+
+            background-color: $accordion-toggled-bg;
+            @include clearfix();
+
+            .component {
+                margin-top: 0;
+
+                .field-content {
+                    color: $text-basic-active;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .items {
+            overflow: hidden;
+        }
+
+        @include respond-to(tab) {
+            .toggle-header {
+                .component {
+                    .field-heading {
+                        font-size: $accordion-header;
+                        padding: 0.3rem 0.3rem 0.3rem 4rem;
+
+                        &:before,
+                        :after {
+                            font-size: 3rem;
+                            right: 33px;
+                        }
+                    }
+                }
+            }
+
+            .toggle-content {
+                .field-content {
+                    padding: 1rem 0.5rem 1rem 4rem;
+                }
+            }
+        }
+
+        @import "variants/component-accordian/variant-1.scss";
+        @import "variants/component-accordian/variant-2.scss";
+        @import "variants/component-accordian/variant-3.scss";
+    }
+}
+
+//custom accordian
+.collapse {
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+
+@import "styles/accordion/*";

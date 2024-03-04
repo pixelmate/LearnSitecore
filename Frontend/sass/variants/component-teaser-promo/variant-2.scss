@@ -1,0 +1,149 @@
+figure {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 44% 10%;
+  min-height: 422px;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: $bg-black;
+    opacity: 0.3;
+    height: 100%;
+  }
+  .inner-wrap {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    h2 {
+      color: $white !important; //white color is fixed on images
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    p {
+      font-size: inherit;
+    }
+  }
+  .field-title {
+    p {
+      color: $white !important;
+    }
+  }
+}
+
+.field-description {
+  margin: auto;
+  width: 100%;
+  //color: $white ;
+  font-size: 1.9rem;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  // color: $dark-green;
+}
+
+.content-right {
+  //background-color: $light-green;
+  .inner-wrap {
+    padding: 3rem 0.5rem 2rem;
+  }
+}
+
+.bottom-link {
+  .field-ctaiconone,
+  .field-ctaicontwo {
+    img {
+      max-width: 80px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .sxa-btn {
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  figure {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1023px) {
+  figure {
+    .inner-wrap {
+      top: 30%;
+      /* right: 173px; */
+      left: 35%;
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  figure {
+    min-height: 220px;
+  }
+  .content-right {
+    height: auto;
+  }
+}
+
+@include respond-to(tab) {
+  figure {
+    .inner-wrap {
+      h2 {
+        font-size: 4.8rem;
+      }
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .content-right {
+    min-height: 422px;
+  }
+}
+
+@include respond-to(desktop) {
+  figure {
+    .inner-wrap {
+      left: auto;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .field-description {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  figure {
+    .inner-wrap {
+      margin: 0;
+      position: absolute;
+      left: 38%;
+      top: 26%;
+      h2 {
+        font-size: 4.8rem;
+      }
+    }
+  }
+}
+
+@include respond-to(large-desktop) {
+  figure {
+    background-position: 3% 100%;
+  }
+  .content-right {
+    .inner-wrap {
+      padding: 5rem 9.4rem 4rem 2.5rem;
+    }
+  }
+}

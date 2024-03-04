@@ -1,0 +1,15 @@
+@import "abstracts/mixins";
+
+.contactDetails{
+    .col-right{
+        .field-bannerimage{
+            padding:7.9rem 6.1rem
+        }
+        @include respond-to(mobile) {
+            .field-bannerimage{
+                padding:3.8rem 3rem
+            }
+        }
+    }
+}
+

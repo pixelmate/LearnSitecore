@@ -1,0 +1,154 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+/*=======================================
+        Modal Popup
+=========================================*/
+
+.modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    background-color: $modal-overlay;
+    -webkit-overflow-scrolling: touch;
+
+    .modal-header {
+        padding: 16px 12px 9px 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+
+    .modal-body {
+        position: relative;
+        padding: 15px;
+    }
+
+    .modal-dialog {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        max-width: 600px;
+
+        @include respond-to(tab) {
+            top: 50%;
+        }
+
+    }
+
+    &.show {
+        .modal-dialog {
+            top: 50%;
+        }
+    }
+
+    &.fade {
+        opacity: 0;
+
+
+        &.show {
+            opacity: 1;
+        }
+
+
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: $background-white;
+        border: 1px solid $border-gray;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px #00000080;
+        background-clip: padding-box;
+        outline: 0;
+
+    }
+
+    .close {
+        font-size: 2rem;
+        line-height: 1;
+        background: 0 0;
+        color: #000;
+        opacity: 1;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: 0;
+        -webkit-appearance: none;
+        font-weight: 700;
+        text-shadow: 0 1px 0 #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 5;
+        &:hover{
+            color: #f47523;
+        }
+    }
+
+    &.no-cancel button.close {
+        display: none;
+    }
+
+    .sxa-btn-default,
+    .sxa-btn-submit {
+        display: inline-block;
+        padding: 10px 16px;
+        font-size: 1.8rem;
+        font-family: inherit;
+        line-height: 1.2;
+        margin: 10px 0;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid $black;
+        white-space: nowrap;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+.modal-open {
+    overflow: hidden;
+
+}
+
+.error-message {
+    color: $text-red;
+    font-size: 1.3rem;
+}
+
+.form-control {
+    &.bt-default-input {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        line-height: 1.42857143;
+        color: $gray;
+        background-color: $background-white;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        -webkit-box-shadow: inset 0 1px 1px #00000014;
+        box-shadow: inset 0 1px 1px #00000014;
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+}

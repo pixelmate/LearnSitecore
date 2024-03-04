@@ -1,0 +1,45 @@
+// boxed
+&.variant-2 {
+    .toggle-header {
+        background-color: $accordion-red;
+        .component {
+            .field-heading {
+                cursor: pointer;
+                color: $white;
+                &:hover {
+                    text-decoration: underline;
+                }
+                &:before,
+                &:after {
+                    right: 25px;
+                }
+                @include respond-to(desktop) {
+                    &::after,
+                    &::before {
+                        right: 33px;
+                    }
+                }
+            }
+        }
+        .label {
+            padding: 1.35rem 0;
+        }
+    }
+    .toggle-content {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        border: 1px solid $accordion-border;
+        border-right: 0;
+        border-radius: 4px;
+        .field-content {
+            color: $text-basic-active;
+            font-size: 1.4rem;
+            @include respond-to(tab) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .item {
+        border-bottom: none;
+        padding-bottom: 1.5rem;
+    }
+}

@@ -1,0 +1,146 @@
+@import "abstracts/mixins";
+@import "abstracts/vars";
+@import "base/fontawesome/font-awesome-mix-var";
+
+.component {
+  &.linked-thumbnail {
+    &.quick-links {
+      padding: 0 15px 0px 30px;
+      margin-bottom: 30px;
+      @import "./variants/component-linked-list-thumbnail/component-quick-links.scss";
+    }
+    h3 {
+      font-size: 2.1rem;
+      color: $orange;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    ul {
+      .slick-track {
+        display: flex;
+        .slick-slide {
+          display: flex;
+          height: auto;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      button {
+        &.slick-prev,
+        &.slick-next {
+          color: $orange;
+          margin-top: -0.3rem;
+
+          &:before,
+          &:after {
+            font-size: 2rem;
+          }
+        }
+
+        &.slick-next {
+          &:after {
+            font-size: 0rem;
+            background: url("../images/slider-arrow-right.png") no-repeat center
+              center fixed;
+            background-size: cover;
+            height: 2rem;
+            width: 1rem;
+          }
+        }
+
+        &.slick-prev {
+          &:before {
+            font-size: 0rem;
+            background: url("../images/slider-arrow-left.png") no-repeat center
+              center fixed;
+            background-size: cover;
+            height: 2rem;
+            width: 1rem;
+          }
+        }
+      }
+      li {
+        img {
+          width: 20rem;
+          margin: auto;
+          padding: 1rem;
+        }
+      }
+    }
+
+    @include respond-to(desktop) {
+      h3 {
+        font-size: 2.8rem;
+      }
+
+      ul {
+        li {
+          img {
+            width: 8rem;
+          }
+        }
+      }
+    }
+
+    &.vertical {
+      h3 {
+        border-bottom: 2px solid #f47523;
+        margin: 0;
+        text-align: left;
+        font-size: 2.4rem;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+
+      ul {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: auto;
+        @include respond-to(tab){
+          height: 370px;
+        }
+
+        li {
+          border-bottom: 2px solid #d3d3d3;
+          @include respond-to(tab) {
+            margin-right: 15px;
+          }
+          
+        }
+
+        .field-image {
+          padding: 0 0 20px 0;
+          display: block;
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        li {
+          img {
+            width: 100%;
+            padding: 0;
+            max-width: 35%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.on-page-editor{
+  .component {
+    &.linked-thumbnail{
+      ul{
+        li{
+          display: inline-block;
+          width: 19%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+.component-solution-finder {
+  width: 100%;
+  .solution-finder {
+    .solutionFinderMainDisplay {
+      text-align: center;
+    }
+    .breadcrumb-bg {
+      background-color: $solution-breadcrumb-bg;
+    }
+    .solution-finder-breadcrumb-container {
+      max-width: 100%;
+    }
+    .solution-finder-breadcrumb {
+      border: none;
+      display: inline-block;
+      margin: 5px 0;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+    .questionDiv {
+      background-color: $solution-title-bg;
+      padding: 70px;
+      h3 {
+        font-size: 48px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        color: $heading-color;
+        padding: 0 30px;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+    }
+    .answersDiv {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .answer-div {
+        display: inline-block;
+        margin: 10px;
+        position: relative;
+        vertical-align: top;
+        cursor: pointer;
+        .answer-title {
+          color: $answer-color;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 5px;
+          text-transform: uppercase;
+          width: 200px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-size: 1.8rem;
+          font-weight: 700;
+          font-family: "Gotham", sans-serif;
+        }
+        .answer-image {
+          display: block;
+          height: unset;
+          margin-left: auto;
+          margin-right: auto;
+          max-height: 215px;
+          max-width: 300px;
+          object-fit: fill;
+          width: unset;
+        }
+        .tooltiptext {
+          background-color: $tooltip-bg;
+          color: $tooltip-color;
+          height: auto;
+          left: 0;
+          opacity: 0.85;
+          padding: 10px;
+          position: absolute;
+          visibility: hidden;
+          width: 200px;
+          z-index: 1;
+          h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: $solution-card-title;
+          }
+          &:empty {
+            display: none;
+          }
+        }
+        &:hover .tooltiptext {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .solutionFinderAnimatedDisplay {
+    display: none;
+  }
+}

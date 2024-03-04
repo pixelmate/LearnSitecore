@@ -1,0 +1,73 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+.component {
+  &.generic-content-list {
+    .page-listing {
+      .inner-wrap {
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        order: 2;
+        margin-bottom: 2rem;
+        .component-subtitle {
+          font-size: 3em;
+          font-weight: 600;
+          text-align: center;
+          color: $text-basic;
+          &.caption-black {
+            color: $text-basic;
+          }
+          &.caption-teal {
+            color: $text-teal;
+          }
+          &.caption-green {
+            color: $text-green;
+          }
+          &.caption-carolina {
+            color: $text-carolina;
+          }
+        }
+        .component-description {
+          padding-bottom: 2.5rem;
+
+          p {
+            font-size: 1.2em;
+            color: $light-gray-txt;
+            padding: 0px 1.5rem;
+          }
+        }
+        .sxa-btn-primary {
+          background-image: url(../images/link_fish.png);
+          background-repeat: no-repeat;
+          background-position: 71% 40%;
+          margin: auto;
+          background-size: 1.7rem;
+          padding-right: 1.2rem;
+          background-color: transparent;
+          max-width: 37.7rem;
+          a {
+            text-decoration: none;
+            font-weight: bold;
+            color: $article-border;
+            letter-spacing: 0.1rem;
+            word-spacing: 0.1rem;
+            text-transform: uppercase;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        @include respond-to(desktop) {
+          padding: 5.6rem 2rem 3rem 3rem;
+          order: 0;
+          .component-description {
+            padding-bottom: 6.5rem;
+          }
+        }
+      }
+    }
+  }
+}

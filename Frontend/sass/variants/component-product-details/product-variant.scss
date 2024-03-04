@@ -1,0 +1,65 @@
+.component {
+  &.product-variant {
+    width: 100%;
+    padding: 0 1.5rem;
+
+    h4 {
+      margin-bottom: 1rem;
+      color: $product-description-body;
+    }
+
+    select {
+      padding: 1.3rem;
+      border:1px solid $border-gray;
+      background-color: $white;
+      font-size: 1.8rem;
+      color: $text-secondary;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2rem;
+
+      option {
+        padding: 1rem 0;
+        width: 100%;
+        font-size: inherit;
+        font-weight: inherit;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: white;
+        }
+
+      }
+
+    }
+
+    .where-to-buy {
+      padding: 2rem 1.5rem;
+        .ps-enabled{
+          small{
+            //plugin button from other source no need to show
+            display: none!important;
+          }
+        }
+    }
+
+
+    @include respond-to(desktop) {
+      select {
+        width: 55%;
+      }
+    }
+  }
+}
+
+option:empty {
+  display: none;
+}
+
+select:empty {
+  display: none;
+}

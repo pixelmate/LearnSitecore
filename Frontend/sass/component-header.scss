@@ -1,0 +1,138 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "base/fontawesome/font-awesome-mix-var.scss";
+
+
+.header-shell {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    @import "variants/component-header/common-nav.scss";
+    @import "variants/component-header/variant-1.scss";
+    @import "variants/component-header/variant-2.scss";
+    @import "variants/component-header/variant-3.scss";
+}
+
+.on-page-editor,
+.preview {
+    padding-top: 0 !important;
+
+    .component{
+        &.header-shell {
+            width: 100%;
+            &.variant-3 {
+                position: static;
+            }
+    
+            &.variant-1 {
+                position: static;
+    
+            }
+    
+            &.variant-2 {
+                position: static;
+            }
+        }
+    }
+}
+
+.header-shell {
+
+    &.variant-1 {
+        position: fixed;
+        top: 0;
+        z-index: 99;
+
+        @media screen and (max-width: 991px) {
+            background-color: $white;
+        }
+    }
+
+    &.variant-2 {
+        position: static;
+        top: 0;
+        z-index: 99;
+        background-color: $white;
+
+    }
+
+    &.variant-3 {
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        background-color: $dark-green;
+
+        &.variant-4 {
+            background-color: $white;
+            position: static;
+        }
+    }
+}
+
+#header {
+    position: relative;
+}
+
+.on-page-editor {
+    .varient-2 {
+        .logo-container {
+            display: block;
+        }
+    }
+}
+
+.on-page-editor {
+    .variant-1 {
+        .component {
+            &.search-box {
+                .custom-search-box-button {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        top: -1rem
+                    }
+                }
+            }
+        }
+    }
+    .component{
+        &.header-shell{
+            &.variant-2{
+                .logo-container{
+                    display: block;
+                }
+            }
+            &.scEnabledChrome{
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.component {
+    &.header-shell {
+        .search-wrapper {
+            background: none;
+            padding: 0;
+
+            .search-input-wrapper {
+                width: 100%;
+
+                input {
+                    padding: 1rem 4.4rem 1rem 1rem;
+                    overflow: hidden;
+                }
+
+                .custom-search-box-button {
+                    right: 1px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

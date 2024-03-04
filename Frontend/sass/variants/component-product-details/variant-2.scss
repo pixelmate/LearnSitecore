@@ -1,0 +1,52 @@
+// product details related articles
+&.related-articles {
+    padding: 3rem 0;
+    .inner-wrap {
+        padding: 2rem;
+        position: relative;
+       // background: linear-gradient( to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0 / 3.2rem 3.2rem, linear-gradient(-135deg, transparent 2.4rem, #f1ede9 0);
+        &:before {
+            content: " ";
+            position: absolute;
+            top: 3.2rem;
+            right: 0;
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+        h2 {
+            color: $orange;
+            text-transform: capitalize;
+        }
+        a {
+            font-size: 1.6rem;
+            color: $product-description-body;
+            text-decoration: none;
+        }
+        .img-wrapper {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .caption {
+            padding: 2rem;
+            font-weight: 700;
+            &:hover {
+                color: $product-description-body;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@include respond-to(desktop){
+    &.related-articles{
+        padding:0px;
+        .inner-wrap {
+            padding:0px 2rem 2rem 2rem;
+        }
+    }
+  }
+
+.container>.row {
+    margin: 0;
+}

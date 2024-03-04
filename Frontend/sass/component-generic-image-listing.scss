@@ -1,0 +1,111 @@
+@import "abstracts/vars";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+.component {
+    &.generic-content-list {
+        &.variant-2 {
+            .image-listing-box {
+                border-bottom: 1px solid $product-card-title;
+                margin-bottom: 4rem;
+                padding-bottom: 4rem;
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                }
+
+                &::before {
+
+                    content: '';
+                    background: $product-card-title;
+                     display: block;
+                    width: 1px;
+                    height: 85%;
+                    position: absolute;
+                    top: 0px;
+                    left: .4rem;
+                }
+
+
+                &:nth-child(4n) {
+                    &::after {
+                        content: '';
+
+                        display: block;
+                        width: 100%;
+                        height: 85%;
+                        position: absolute;
+                        top: 0px;
+                        border-right: 1px solid $product-card-title;
+                        opacity: .8;
+                        ;
+                        right: .1rem;
+
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+
+            .component-title {
+
+                h2 {
+                    color: $accordion-green;
+                    font-size: 3.2rem;
+                    font-weight: 900;
+                    padding-bottom: 1.5rem;
+                }
+
+                p {
+                    color: $product-card-title;
+                    opacity: .8;
+                    font-size: 1.8rem;
+
+                }
+            }
+
+            .sxa-btn {
+
+                text-align: center;
+
+                h2 {
+
+                    font-size: 1.6rem;
+                    color: $product-card-title;
+                    font-weight: 900;
+                }
+
+            }
+
+            @media only screen and (max-width: 991px) {
+                .image-listing-box {
+                    &:nth-child(2n) {
+                        &::after {
+                            content: '';
+
+                            display: block;
+                            width: 100%;
+                            height: 85%;
+                            position: absolute;
+                            top: 0px;
+                            border-right: 1px solid $product-card-title;
+                            opacity: .8;
+                            ;
+                            right: .1rem;
+
+                        }
+                    }
+
+
+
+                }
+            }
+
+        }
+    }
+
+}

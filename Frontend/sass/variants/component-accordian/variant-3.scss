@@ -1,0 +1,95 @@
+// rounded bordered
+&.variant-3 {
+    .toggle-header {
+        .component {
+            .field-heading {
+                color: $white;
+                font-size: 1.6rem;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                &:before,
+                &:after {
+                    right: 25px;
+                    background: $white;
+                }
+            }
+        }
+
+        .label {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: $accordion-green;
+            padding: 2.65rem 0;
+            border-bottom: 3px solid $white;
+            overflow: hidden;
+        }
+    }
+
+    .toggle-content {
+        .field-content {
+            color: $accordion-text-gray;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding-bottom: 2rem;
+
+            @include respond-to(tab) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .item {        
+        @include index;
+        .toggle-content {
+            border-top: none !important;
+            border: 2px solid $accordion-green;
+        }
+
+        &:first-child {
+            .label {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        }
+
+        &.active {
+            .label {
+                border: 2px solid $accordion-green;
+                border-radius: 8px;
+                background-color: $white;
+                border-bottom: none;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            .toggle-header {
+                background-color: $white;
+
+                .field-heading {
+                    color: $accordion-text-gray;
+
+                    &::after,
+                    &::before {
+                        background-color: $accordion-green;
+                    }
+
+                    /* &::before {
+                        transform: translateY(-50%) rotate(90deg);
+                        transition: transform 0.25s ease-in-out;
+                    } */
+                }
+            }
+        }
+
+        position: relative;
+        overflow: none;
+
+        &:last-child {
+            .toggle-content {
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+        }
+    }
+}
