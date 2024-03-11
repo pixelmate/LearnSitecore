@@ -28,6 +28,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC.Project.CeraveIndia", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{74ABD315-7817-4422-BD1B-595FBA7F97D1}"
 	ProjectSection(SolutionItems) = preProject
+		Configuration\gulp-config.js = Configuration\gulp-config.js
+		Configuration\gulpfile.js = Configuration\gulpfile.js
+		Configuration\NuGet.config = Configuration\NuGet.config
 		sitecore.json = sitecore.json
 	EndProjectSection
 EndProject

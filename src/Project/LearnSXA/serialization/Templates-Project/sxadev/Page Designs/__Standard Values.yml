@@ -1,0 +1,37 @@
+﻿---
+ID: "f11ab7da-c2ab-4e9d-9d77-4cc4944b90ac"
+Parent: "0f4ebc2f-d96b-4a03-adfd-d8f0caca80e3"
+Template: "0f4ebc2f-d96b-4a03-adfd-d8f0caca80e3"
+Path: /sitecore/templates/Project/Demo/Brand Sites/sxadev/Page Designs/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {DF959223-8B34-4D48-B31A-60124E4938F6}
+    {40C06F08-3021-4293-8D3B-25CB771BB51E}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240301T094345Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "35e13171-9d99-41b3-a3fa-8a18846f3186"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240301T094351Z

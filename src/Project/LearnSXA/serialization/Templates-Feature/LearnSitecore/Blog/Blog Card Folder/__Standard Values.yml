@@ -1,0 +1,37 @@
+﻿---
+ID: "c85938cb-6ed3-4b23-96d1-b02bbe7392cd"
+Parent: "8b5b560e-c2ac-4efa-bbfd-ad53a705e371"
+Template: "8b5b560e-c2ac-4efa-bbfd-ad53a705e371"
+Path: /sitecore/templates/Feature/LearnSitecore/Blog/Blog Card Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {2E4ADFCD-CC7A-4C70-983A-4E8FC8F22338}
+    {8B5B560E-C2AC-4EFA-BBFD-AD53A705E371}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240306T072102Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48175e24-a432-446a-aee5-983cd14fa911"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240306T072134Z

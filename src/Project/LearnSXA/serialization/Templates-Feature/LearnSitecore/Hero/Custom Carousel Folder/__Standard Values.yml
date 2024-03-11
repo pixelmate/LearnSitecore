@@ -1,0 +1,33 @@
+﻿---
+ID: "4756a05a-1d75-4372-81c6-bbff642b5c52"
+Parent: "a7cac82f-c966-470a-826a-a185754b8021"
+Template: "a7cac82f-c966-470a-826a-a185754b8021"
+Path: /sitecore/templates/Feature/LearnSitecore/Hero/Custom Carousel Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3D6928B8-FF00-4DBD-B539-1BC7A4D72B07}
+    {A7CAC82F-C966-470A-826A-A185754B8021}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071502Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab0dd35c-e813-4733-bdda-3a50fecf6eeb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240305T084704Z

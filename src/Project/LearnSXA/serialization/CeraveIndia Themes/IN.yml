@@ -2,7 +2,7 @@
 ID: "1cfea710-81fe-4855-8044-004d81fc5a9d"
 Parent: "b23eedc1-2b69-4f62-9487-55c439e3c89b"
 Template: "f7653f31-6f17-4daa-9217-8e116babc927"
-Path: /sitecore/media library/Themes/Loreal/Brand Sites/Cerave/IN/IN
+Path: /sitecore/media library/Themes/Demo/Brand Sites/sxadev/IN/IN
 SharedFields:
 - ID: "384c2d3c-3e34-4493-9cb2-ade68caf0da2"
   Hint: BaseLayout

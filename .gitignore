@@ -10,3 +10,4 @@
 # Don't commit packages
 *.itempackage
 *.sicpackage
+node_modules/

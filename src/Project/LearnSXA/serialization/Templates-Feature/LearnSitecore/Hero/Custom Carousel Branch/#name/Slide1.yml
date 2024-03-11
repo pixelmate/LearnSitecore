@@ -1,0 +1,27 @@
+﻿---
+ID: "6ddacf2e-41cd-4464-8a55-afa6dd54a847"
+Parent: "8c92321a-8770-46d8-9a73-b41fe6fa666d"
+Template: "1ee1641a-413c-43f5-9a48-459cc0473c88"
+Path: /sitecore/templates/Feature/LearnSitecore/Hero/Custom Carousel Branch/$name/Slide1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170705T154223Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed90e585-c051-4670-9d4d-e72d517536f9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240305T084658Z

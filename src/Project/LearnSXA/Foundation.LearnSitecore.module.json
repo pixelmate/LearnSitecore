@@ -4,7 +4,7 @@
     "includes": [
       {
         "name": "Templates-Project",
-        "path": "/sitecore/templates/Project/Loreal/Brand Sites/Cerave",
+        "path": "/sitecore/templates/Project/Demo/Brand Sites/sxadev",
         "scope": "ItemAndDescendants",
         "allowedPushOperations": "createUpdateAndDelete"
       },
@@ -52,19 +52,19 @@
       },
       {
         "name": "Media-library-Project",
-        "path": "/sitecore/media library/Project/Loreal",
+        "path": "/sitecore/media library/Project/Demo",
         "scope": "SingleItem",
         "allowedPushOperations": "createUpdateAndDelete"
       },
       {
         "name": "CeraveIndia Content",
-        "path": "/sitecore/content/Loreal/Brand Sites/Cerave",
+        "path": "/sitecore/content/Demo/Brand Sites/sxadev",
         "scope": "SingleItem",
         "allowedPushOperations": "createUpdateAndDelete"
       },
       {
         "name": "CeraveIndia Themes",
-        "path": "/sitecore/media library/Themes/Loreal/Brand Sites/Cerave/IN/IN",
+        "path": "/sitecore/media library/Themes/Demo/Brand Sites/sxadev/IN/IN",
         "scope": "SingleItem",
         "allowedPushOperations": "createUpdateAndDelete"
       }

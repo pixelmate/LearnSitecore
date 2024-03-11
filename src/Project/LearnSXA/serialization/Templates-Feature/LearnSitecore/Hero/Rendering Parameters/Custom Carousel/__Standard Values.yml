@@ -1,0 +1,36 @@
+﻿---
+ID: "ed9d5f42-6ea2-4444-8c77-6af4f5cc32ae"
+Parent: "1490f17a-61e2-466d-b655-1ef0860a536d"
+Template: "1490f17a-61e2-466d-b655-1ef0860a536d"
+Path: /sitecore/templates/Feature/LearnSitecore/Hero/Rendering Parameters/Custom Carousel/__Standard Values
+SharedFields:
+- ID: "35d3d1f0-cdd0-47ac-81a1-469919604923"
+  Hint: PauseOnHover
+  Value: 1
+- ID: "5fe66484-95b9-4a6c-8137-2fdccf9aa232"
+  Hint: Navigation
+  Value: "{848DFE42-2B13-430E-A0B9-89CE25730A06}"
+- ID: "a14a958b-cdf8-4159-a83a-454f92059fb3"
+  Hint: Timeout
+  Value: 2000
+- ID: "a98ea606-f13d-4085-8b52-6e6d7b572c82"
+  Hint: Transition
+  Value: "{D4B706CC-7EEC-4DB9-A87D-123B29803490}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111207T101135Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1f174b1-1dbe-4866-ada8-b8a2876d36a5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240305T084657Z
